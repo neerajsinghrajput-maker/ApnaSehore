@@ -444,3 +444,21 @@ footer {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+.btn-list {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffcc00;      /* bright box color */
+  color: #0d47a1;           /* text color */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;       /* rounded corners like your form boxes */
+  border: 2px solid #0d47a1;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-list:hover {
+  background: #0d47a1;
+  color: #ffcc00;
+  border-color: #ffcc00;
+}
