@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services in Sehore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🔧 Services – <span>Sehore</span></div>
+</header>
+
+<div class="coming-soon">
+  Available Soon After Partnership
+</div>
+
+<section class="section">
+  <div class="grid">
+
+    <!-- SERVICE 1 -->
+    <div class="inner-card" onclick="toggleDetails('s1')">
+      🔧 Plumber Service
+      <div class="details" id="s1">
+        <p><b>Provider:</b> Sharma Plumbing</p>
+        <p><b>Experience:</b> 5 Years</p>
+        <p><b>Contact:</b> 9XXXXXXXXX</p>
+        <p><b>Area:</b> Sehore City</p>
+      </div>
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="inner-card" onclick="toggleDetails('s2')">
+      ⚡ Electrician
+      <div class="details" id="s2">
+        <p><b>Provider:</b> Verma Electricals</p>
+        <p><b>Experience:</b> 7 Years</p>
+        <p><b>Contact:</b> 8XXXXXXXXX</p>
+        <p><b>Area:</b> Bhopal Naka</p>
+      </div>
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="inner-card" onclick="toggleDetails('s3')">
+      ❄️ AC Repair
+      <div class="details" id="s3">
+        <p><b>Provider:</b> Cool Air Service</p>
+        <p><b>Experience:</b> 4 Years</p>
+        <p><b>Contact:</b> 7XXXXXXXXX</p>
+        <p><b>Area:</b> Bus Stand Area</p>
+      </div>
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="inner-card" onclick="toggleDetails('s4')">
+      🪚 Carpenter
+      <div class="details" id="s4">
+        <p><b>Provider:</b> Khan Furniture Works</p>
+        <p><b>Experience:</b> 6 Years</p>
+        <p><b>Contact:</b> 9XXXXXXXXX</p>
+        <p><b>Area:</b> Indore Road</p>
+      </div>
+    </div>
+
+    <!-- SERVICE 5 -->
+    <div class="inner-card" onclick="toggleDetails('s5')">
+      🎨 Painter
+      <div class="details" id="s5">
+        <p><b>Provider:</b> Royal Paint Service</p>
+        <p><b>Experience:</b> 3 Years</p>
+        <p><b>Contact:</b> 8XXXXXXXXX</p>
+        <p><b>Area:</b> Sehore Rural</p>
+      </div>
+    </div>
+
+    <!-- SERVICE 6 -->
+    <div class="inner-card" onclick="toggleDetails('s6')">
+      🧹 Cleaning Service
+      <div class="details" id="s6">
+        <p><b>Provider:</b> Smart Clean Sehore</p>
+        <p><b>Experience:</b> 2 Years</p>
+        <p><b>Contact:</b> 7XXXXXXXXX</p>
+        <p><b>Area:</b> Full Sehore</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">⬅ Back</a>
+</footer>
+
+<script>
+function toggleDetails(id) {
+  let all = document.querySelectorAll('.details');
+  all.forEach(d => d.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+</body>
+</html>

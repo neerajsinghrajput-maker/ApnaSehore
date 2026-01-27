@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coaching in Sehore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">📚 Coaching – <span>Sehore</span></div>
+</header>
+
+<div class="coming-soon">
+  Available Soon After Partnership
+</div>
+
+<section class="section">
+  <div class="grid">
+
+    <!-- COACHING 1 -->
+    <div class="inner-card" onclick="toggleDetails('c1')">
+      📘 Success Coaching
+      <div class="details" id="c1">
+        <p><b>Subjects:</b> Maths, Science</p>
+        <p><b>Classes:</b> 8th – 10th</p>
+        <p><b>Fees:</b> ₹1,200 / month</p>
+        <p><b>Location:</b> Bhopal Naka</p>
+      </div>
+    </div>
+
+    <!-- COACHING 2 -->
+    <div class="inner-card" onclick="toggleDetails('c2')">
+      📗 Bright Future Academy
+      <div class="details" id="c2">
+        <p><b>Subjects:</b> PCM</p>
+        <p><b>Classes:</b> 11th – 12th</p>
+        <p><b>Fees:</b> ₹2,000 / month</p>
+        <p><b>Location:</b> Sehore City</p>
+      </div>
+    </div>
+
+    <!-- COACHING 3 -->
+    <div class="inner-card" onclick="toggleDetails('c3')">
+      🧮 Genius Maths Classes
+      <div class="details" id="c3">
+        <p><b>Subject:</b> Mathematics</p>
+        <p><b>Classes:</b> 6th – 10th</p>
+        <p><b>Fees:</b> ₹1,000 / month</p>
+        <p><b>Teacher:</b> R. Sharma</p>
+      </div>
+    </div>
+
+    <!-- COACHING 4 -->
+    <div class="inner-card" onclick="toggleDetails('c4')">
+      💻 Computer Point
+      <div class="details" id="c4">
+        <p><b>Courses:</b> Basic, DCA, Tally</p>
+        <p><b>Duration:</b> 3–6 Months</p>
+        <p><b>Fees:</b> ₹3,000+</p>
+        <p><b>Location:</b> Bus Stand Area</p>
+      </div>
+    </div>
+
+    <!-- COACHING 5 -->
+    <div class="inner-card" onclick="toggleDetails('c5')">
+      🏫 Career Institute
+      <div class="details" id="c5">
+        <p><b>Preparation:</b> Govt Exams</p>
+        <p><b>Exams:</b> Patwari, Police</p>
+        <p><b>Fees:</b> ₹2,500 / month</p>
+        <p><b>Mode:</b> Offline</p>
+      </div>
+    </div>
+
+    <!-- COACHING 6 -->
+    <div class="inner-card" onclick="toggleDetails('c6')">
+      ✍️ Spoken English Hub
+      <div class="details" id="c6">
+        <p><b>Course:</b> Spoken English</p>
+        <p><b>Duration:</b> 2 Months</p>
+        <p><b>Fees:</b> ₹1,500</p>
+        <p><b>Batch:</b> Morning / Evening</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">⬅ Back</a>
+</footer>
+
+<script>
+function toggleDetails(id) {
+  let all = document.querySelectorAll('.details');
+  all.forEach(d => d.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>

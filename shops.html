@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shops in Sehore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🛍️ Shops – <span>Sehore</span></div>
+</header>
+
+<div class="coming-soon">
+  Available Soon After Partnership
+</div>
+
+<section class="section">
+  <div class="grid">
+
+    <!-- SHOP 1 -->
+    <div class="inner-card" onclick="toggleDetails('sh1')">
+      🛒 Verma General Store
+      <div class="details" id="sh1">
+        <p><b>Category:</b> Grocery</p>
+        <p><b>Location:</b> Bhopal Naka</p>
+        <p><b>Timing:</b> 8 AM – 10 PM</p>
+        <p><b>Contact:</b> 9XXXXXXXXX</p>
+      </div>
+    </div>
+
+    <!-- SHOP 2 -->
+    <div class="inner-card" onclick="toggleDetails('sh2')">
+      📱 Mobile Zone
+      <div class="details" id="sh2">
+        <p><b>Category:</b> Mobile & Accessories</p>
+        <p><b>Brands:</b> Samsung, Redmi</p>
+        <p><b>Location:</b> Bus Stand Area</p>
+      </div>
+    </div>
+
+    <!-- SHOP 3 -->
+    <div class="inner-card" onclick="toggleDetails('sh3')">
+      👕 Fashion Point
+      <div class="details" id="sh3">
+        <p><b>Category:</b> Clothing</p>
+        <p><b>For:</b> Men / Women</p>
+        <p><b>Location:</b> Sehore City</p>
+      </div>
+    </div>
+
+    <!-- SHOP 4 -->
+    <div class="inner-card" onclick="toggleDetails('sh4')">
+      🥦 Fresh Veg Market
+      <div class="details" id="sh4">
+        <p><b>Category:</b> Vegetable Shop</p>
+        <p><b>Fresh:</b> Daily</p>
+        <p><b>Location:</b> Old Sehore</p>
+      </div>
+    </div>
+
+    <!-- SHOP 5 -->
+    <div class="inner-card" onclick="toggleDetails('sh5')">
+      🛠️ Hardware Store
+      <div class="details" id="sh5">
+        <p><b>Category:</b> Construction Material</p>
+        <p><b>Items:</b> Cement, Paint, Tools</p>
+        <p><b>Location:</b> Indore Road</p>
+      </div>
+    </div>
+
+    <!-- SHOP 6 -->
+    <div class="inner-card" onclick="toggleDetails('sh6')">
+      🍰 Sweet & Bakery
+      <div class="details" id="sh6">
+        <p><b>Category:</b> Bakery & Sweets</p>
+        <p><b>Special:</b> Cakes, Namkeen</p>
+        <p><b>Location:</b> College Area</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">⬅ Back</a>
+</footer>
+
+<script>
+function toggleDetails(id) {
+  let all = document.querySelectorAll('.details');
+  all.forEach(d => d.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List Your Business – MySehore.in</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo"><a href="index.html" style="text-decoration:none; color:white;">My<span>Sehore</span></a></div>
+  <a href="index.html" class="btn-list">Back to Home</a>
+</header>
+
+<section class="form-section">
+  <div class="form-container">
+    <h2>अपना बिजनेस रजिस्टर करें</h2>
+    <p>सीहोर के हजारों लोगों तक अपनी पहुंच बढ़ाएं।</p>
+    <hr>
+
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label>Owner Name (मालिक का नाम)</label>
+        <input type="text" placeholder="Enter owner name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Business Name (दुकान/संस्था का नाम)</label>
+        <input type="text" placeholder="Enter business name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Category (कैटेगरी चुनें)</label>
+        <select required>
+          <option value="">Select Category</option>
+          <option value="shops">Shops</option>
+          <option value="school">School</option>
+          <option value="coaching">Coaching</option>
+          <option value="jobs">Jobs/Agency</option>
+          <option value="services">Services (Plumber/Electrician)</option>
+          <option value="property">Property</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>WhatsApp Number</label>
+          <input type="tel" placeholder="91XXXXXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@mail.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Full Address (पूरा पता)</label>
+        <textarea rows="3" placeholder="Shop No, Street, Landmark, Sehore..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Google Maps Link (Optional)</label>
+        <input type="url" placeholder="Paste location link here">
+      </div>
+
+      <div class="form-group">
+        <label>Business Description (आपके बिजनेस के बारे में जानकारी)</label>
+        <textarea rows="4" placeholder="आप क्या-क्या सर्विस देते हैं?"></textarea>
+      </div>
+
+      <div class="plan-selection">
+        <label>Choose Listing Plan:</label>
+        <div class="plan-options">
+          <label class="plan-card">
+            <input type="radio" name="plan" value="free" checked>
+            <span>Standard (Free)</span>
+          </label>
+          <label class="plan-card gold">
+            <input type="radio" name="plan" value="premium">
+            <span>Featured Listing (Paid) ★</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit for Verification</button>
+    </form>
+  </div>
+</section>
+
+<footer>© 2026 <a href="index.html">MySehore.in</a></footer>
+
+</body>
+</html>

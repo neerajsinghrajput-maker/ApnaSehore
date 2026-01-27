@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colleges in Sehore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🎓 Colleges – <span>Sehore</span></div>
+</header>
+
+<div class="coming-soon">
+  Available Soon After Partnership
+</div>
+
+<section class="section">
+  <div class="grid">
+
+    <!-- COLLEGE 1 -->
+    <div class="inner-card" onclick="toggleDetails('cl1')">
+      🎓 Govt College Sehore
+      <div class="details" id="cl1">
+        <p><b>Name:</b> P.G. College Sehore</p>
+        <p><b>Type:</b> Government</p>
+        <p><b>Courses:</b> BA, BSc, BCom</p>
+        <p><b>Address:</b> Bhopal Naka, Sehore</p>
+      </div>
+    </div>
+
+    <!-- COLLEGE 2 -->
+    <div class="inner-card" onclick="toggleDetails('cl2')">
+      👩‍🎓 Girls College Sehore
+      <div class="details" id="cl2">
+        <p><b>Type:</b> Government</p>
+        <p><b>Courses:</b> BA, BSc</p>
+        <p><b>Address:</b> Bhopal Naka Se Aage</p>
+      </div>
+    </div>
+
+    <!-- COLLEGE 3 -->
+    <div class="inner-card" onclick="toggleDetails('cl3')">
+      🏫 Private Degree College
+      <div class="details" id="cl3">
+        <p><b>Type:</b> Private</p>
+        <p><b>Courses:</b> BCA, BBA</p>
+        <p><b>Location:</b> Indore Road</p>
+      </div>
+    </div>
+
+    <!-- COLLEGE 4 -->
+    <div class="inner-card" onclick="toggleDetails('cl4')">
+      🛠️ Polytechnic College
+      <div class="details" id="cl4">
+        <p><b>Type:</b> Technical</p>
+        <p><b>Courses:</b> Diploma (Civil, Mechanical)</p>
+        <p><b>Location:</b> Ashta Road</p>
+      </div>
+    </div>
+
+    <!-- COLLEGE 5 -->
+    <div class="inner-card" onclick="toggleDetails('cl5')">
+      💻 Computer College
+      <div class="details" id="cl5">
+        <p><b>Courses:</b> DCA, PGDCA</p>
+        <p><b>Duration:</b> 6–12 Months</p>
+        <p><b>Location:</b> Sehore City</p>
+      </div>
+    </div>
+
+    <!-- COLLEGE 6 -->
+    <div class="inner-card" onclick="toggleDetails('cl6')">
+      🧑‍⚕️ Nursing College
+      <div class="details" id="cl6">
+        <p><b>Courses:</b> GNM, ANM</p>
+        <p><b>Type:</b> Private</p>
+        <p><b>Location:</b> Bhopal Road</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">⬅ Back</a>
+</footer>
+
+<script>
+function toggleDetails(id) {
+  let all = document.querySelectorAll('.details');
+  all.forEach(d => d.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>

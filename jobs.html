@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobs in Sehore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">💼 Jobs – <span>Sehore</span></div>
+</header>
+
+<div class="coming-soon">
+  Available Soon After Partnership
+</div>
+
+<section class="section">
+  <div class="grid">
+
+    <!-- JOB 1 -->
+    <div class="inner-card" onclick="toggleDetails('j1')">
+      🧑‍💼 Office Boy
+      <div class="details" id="j1">
+        <p><b>Company:</b> Sharma Traders</p>
+        <p><b>Salary:</b> ₹8,000 – ₹10,000</p>
+        <p><b>Timing:</b> Full Time</p>
+        <p><b>Contact:</b> 9XXXXXXXXX</p>
+      </div>
+    </div>
+
+    <!-- JOB 2 -->
+    <div class="inner-card" onclick="toggleDetails('j2')">
+      🏪 Shop Helper
+      <div class="details" id="j2">
+        <p><b>Shop:</b> Verma General Store</p>
+        <p><b>Salary:</b> ₹7,000 – ₹9,000</p>
+        <p><b>Timing:</b> Full Time</p>
+        <p><b>Location:</b> Bhopal Naka</p>
+      </div>
+    </div>
+
+    <!-- JOB 3 -->
+    <div class="inner-card" onclick="toggleDetails('j3')">
+      🚚 Delivery Boy
+      <div class="details" id="j3">
+        <p><b>Company:</b> Local Courier</p>
+        <p><b>Salary:</b> ₹12,000+</p>
+        <p><b>Requirement:</b> Bike + License</p>
+        <p><b>Area:</b> Sehore City</p>
+      </div>
+    </div>
+
+    <!-- JOB 4 -->
+    <div class="inner-card" onclick="toggleDetails('j4')">
+      📞 Telecaller
+      <div class="details" id="j4">
+        <p><b>Office:</b> Finance Office</p>
+        <p><b>Salary:</b> ₹9,000 – ₹11,000</p>
+        <p><b>Language:</b> Hindi</p>
+        <p><b>Experience:</b> Fresher Allowed</p>
+      </div>
+    </div>
+
+    <!-- JOB 5 -->
+    <div class="inner-card" onclick="toggleDetails('j5')">
+      🧹 Office Cleaner
+      <div class="details" id="j5">
+        <p><b>Place:</b> Private Office</p>
+        <p><b>Salary:</b> ₹6,000 – ₹7,000</p>
+        <p><b>Timing:</b> Morning</p>
+        <p><b>Area:</b> Bus Stand</p>
+      </div>
+    </div>
+
+    <!-- JOB 6 -->
+    <div class="inner-card" onclick="toggleDetails('j6')">
+      👨‍🍳 Hotel Cook
+      <div class="details" id="j6">
+        <p><b>Hotel:</b> Sehore Palace</p>
+        <p><b>Salary:</b> ₹15,000</p>
+        <p><b>Experience:</b> 2 Years</p>
+        <p><b>Location:</b> Indore Road</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">⬅ Back</a>
+</footer>
+
+<script>
+function toggleDetails(id) {
+  let all = document.querySelectorAll('.details');
+  all.forEach(d => d.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>

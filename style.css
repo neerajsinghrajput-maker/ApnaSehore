@@ -1,0 +1,446 @@
+/* --- आपका मौजूदा कोड शुरू (Existing Code) --- */
+
+/* General Enhancement */
+:root {
+    --primary: #006D77;
+    --secondary: #FFDDD2;
+    --white: Orange;
+    --gray: #f3f4f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--gray);
+}
+
+/* Header Improvements */
+.header {
+    background: var(--primary);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.btn-list {
+    background: var(--secondary);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-list:hover {
+    transform: scale(1.05);
+    background: #f59e0b;
+}
+
+/* Hero & Search Styling (New) */
+.hero {
+    background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), 
+                url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000');
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.search-container button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Grid & Card Level Up */
+.section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid #e5e7eb;
+}
+
+.card span {
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+/* Sale Booster: Featured Card Styling */
+.featured {
+    border: 2px solid var(--secondary);
+    position: relative;
+}
+
+.featured::before {
+    content: "Ad";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: var(--secondary);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Registration Form Styling */
+.form-section {
+  padding: 40px 15px;
+  background: #f4f7f9;
+}
+
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  color: #0d47a1;
+  margin-bottom: 5px;
+}
+
+.form-container p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 5px rgba(13, 71, 161, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Plan Selection Buttons */
+.plan-selection {
+  margin: 25px 0;
+  text-align: left;
+}
+
+.plan-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.plan-card {
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.plan-card:hover {
+  border-color: #0d47a1;
+}
+
+.plan-card.gold {
+  border-color: #ffcc00;
+  background: #fffdf0;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #0d47a1;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer Styling */
+footer {
+    background: #1f2937;
+    color: #9ca3af;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: var(--secondary);
+}
+
+/* --- आपका कोड यहाँ समाप्त --- */
+
+
+/* --- NEW ADDITIONS: Inner Grid & Premium Features (नया कोड) --- */
+
+/* 1. Inner Sub-Category Grid (Boxes Design) */
+.sub-section {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.sub-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sub-box {
+  background: white;
+  padding: 20px 10px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: #333;
+}
+
+.sub-box:hover {
+  border-color: var(--primary);
+  background: #f8faff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.1);
+}
+
+.sub-icon {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.sub-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* 2. Verification & Back Styling */
+.verification-text {
+  font-size: 14px;
+  color: #e67e22; /* Warning Orange */
+  margin-bottom: 25px;
+  font-weight: 500;
+  background: #fff4e6;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #6c757d; /* ग्रे बटन कलर */
+  color: white; /* टेक्स्ट का रंग सफेद */
+  padding: 10px 25px;
+  border-radius: 50px; /* कैप्सूल जैसा शेप */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #495057; /* डार्क ग्रे ऑन होवर */
+  transform: translateX(-5px); /* पीछे की तरफ हल्का सा खिसकना */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+/* 3. Floating Contact Button (Conversion Rate बढ़ाएगा) */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Responsive Form & Grid Adjustments */
+@media (max-width: 600px) {
+  .form-row, .plan-options {
+    grid-template-columns: 1fr;
+  }
+  .sub-category-grid {
+    grid-template-columns: repeat(2, 1fr); /* मोबाइल पर 2 बॉक्स */
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+/* ग्रिड को सेट करने के लिए */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+/* इनर कार्ड को बॉक्स बनाने के लिए */
+.inner-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* बॉक्स पर माउस ले जाने पर असर */
+.inner-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e40af; /* आपके पोर्टल का थीम कलर */
+  box-shadow: 0 8px 15px rgba(30, 64, 175, 0.1);
+  background-color: #f8faff;
+}
+.coming-soon{
+  text-align: center;
+  font-size: 14px;
+  color: #ff6b00;
+  margin: 8px 0 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
