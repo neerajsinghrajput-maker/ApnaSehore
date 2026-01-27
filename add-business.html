@@ -5,6 +5,127 @@
   <title>List Your Business – MySehore.in</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .header {
+      background: #0d47a1;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .logo span {
+      color: #ffcc00;
+    }
+    .btn-list {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ffcc00;
+      color: #0d47a1;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .form-section {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      margin-bottom: 5px;
+    }
+    .form-container p {
+      margin-top: 0;
+      color: #555;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+    .form-row .form-group {
+      flex: 1;
+    }
+    .plan-options {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .plan-card {
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .plan-card:hover {
+      border-color: #0d47a1;
+    }
+    .plan-card.gold {
+      border-color: gold;
+      background: #fff8dc;
+    }
+    .submit-btn {
+      padding: 12px 25px;
+      background: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: #08306b;
+    }
+    .thankyou-message {
+      text-align: center;
+      padding: 40px;
+      font-size: 18px;
+      color: #0d47a1;
+      display: none;
+    }
+    .thankyou-message h2 {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0d47a1;
+      color: white;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,12 +135,12 @@
 </header>
 
 <section class="form-section">
-  <div class="form-container">
+  <div class="form-container" id="form-container">
     <h2>अपना बिजनेस रजिस्टर करें</h2>
     <p>सीहोर के हजारों लोगों तक अपनी पहुंच बढ़ाएं।</p>
     <hr>
 
-    <form action="#" method="POST">
+    <form id="businessForm">
       <div class="form-group">
         <label>Owner Name (मालिक का नाम)</label>
         <input type="text" placeholder="Enter owner name" required>
@@ -85,10 +206,28 @@
 
       <button type="submit" class="submit-btn">Submit for Verification</button>
     </form>
+
+    <div class="thankyou-message" id="thankyou-message">
+      <h2>Thank You!</h2>
+      <p>Your business registration request has been received. Our team will contact you shortly for verification.</p>
+      <p>We appreciate your trust in <strong>MySehore.in</strong>.</p>
+    </div>
   </div>
 </section>
 
 <footer>© 2026 <a href="index.html">MySehore.in</a></footer>
+
+<script>
+  const form = document.getElementById('businessForm');
+  const thankYou = document.getElementById('thankyou-message');
+  const formContainer = document.getElementById('form-container');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default page reload
+    form.style.display = 'none'; // Hide form
+    thankYou.style.display = 'block'; // Show thank you message
+  });
+</script>
 
 </body>
 </html>
