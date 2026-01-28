@@ -140,7 +140,8 @@
     <p>सीहोर के हजारों लोगों तक अपनी पहुंच बढ़ाएं।</p>
     <hr>
 
-    <form id="businessForm">
+    <!-- Form with FormSpree ID -->
+    <form id="businessForm" action="https://formspree.io/f/xeegngbw" method="POST">
       <div class="form-group">
         <label>Owner Name (मालिक का नाम)</label>
         <input type="text" placeholder="Enter owner name" required>
@@ -195,7 +196,7 @@
         <div class="plan-options">
           <label class="plan-card">
             <input type="radio" name="plan" value="free" checked>
-            <span>Standard (Free)</span>
+            <span>Standard </span>
           </label>
           <label class="plan-card gold">
             <input type="radio" name="plan" value="premium">
@@ -216,20 +217,27 @@
 </section>
 
 <footer>© 2026 <a href="index.html">MySehore.in</a></footer>
-<form action="https://formspree.io/f/xeegngbw" method="POST">
-  <input type="text" name="business_name" required>
-  <input type="tel" name="phone" required>
-  <button type="submit">Submit</button>
-</form>
+
+<!-- Optional JavaScript for thank-you message -->
 <script>
   const form = document.getElementById('businessForm');
   const thankYou = document.getElementById('thankyou-message');
-  const formContainer = document.getElementById('form-container');
 
   form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent default page reload
-    form.style.display = 'none'; // Hide form
-    thankYou.style.display = 'block'; // Show thank you message
+    e.preventDefault(); // Prevent page reload
+    form.style.display = 'none';
+    thankYou.style.display = 'block';
+
+    // Submit data to FormSpree
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (!response.ok) {
+        alert("There was a problem submitting the form.");
+      }
+    });
   });
 </script>
 
