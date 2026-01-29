@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ब्लॉग - सीहोर | MySehore.in</title>
+    <meta name="description" content="सीहोर से जुड़ी नवीनतम खबरें, सरकारी योजनाएं, गाइड और अपडेट">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 70%);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .blog-hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+        
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--light-bg);
+            border: 2px solid var(--light-border);
+            border-radius: var(--radius-full);
+            color: var(--text-medium);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .category-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .category-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeIn 0.6s ease backwards;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .blog-title a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .blog-title a:hover {
+            color: var(--primary);
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-excerpt {
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .sidebar-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--light-border);
+        }
+        
+        .recent-posts {
+            list-style: none;
+        }
+        
+        .recent-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--light-border);
+        }
+        
+        .recent-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .recent-image {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+        }
+        
+        .recent-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+        
+        .recent-content h4 a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        
+        .recent-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .categories-list {
+            list-style: none;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--light-border);
+        }
+        
+        .category-item:last-child {
+            border-bottom: none;
+        }
+        
+        .category-item a {
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .category-item a:hover {
+            color: var(--primary);
+        }
+        
+        .category-count {
+            background: var(--light-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            padding: 0.5rem 1rem;
+            background: var(--light-bg);
+            color: var(--text-medium);
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .tag:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 3rem 0;
+        }
+        
+        .page-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--light-border);
+            border-radius: var(--radius-md);
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .page-link:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .page-link.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-sidebar {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="logo-text">
+                My<span>Sehore</span>
+            </div>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> होम
+            </a>
+            <a href="blog.html" class="nav-link active">
+                <i class="fas fa-newspaper"></i> ब्लॉग
+            </a>
+            <a href="add-business.html" class="cta-button">
+                <i class="fas fa-plus-circle"></i> लेख लिखें
+            </a>
+        </nav>
+    </div>
+</header>
+
+<section class="blog-hero">
+    <div class="container">
+        <h1>सीहोर ब्लॉग</h1>
+        <p>सीहोर से जुड़ी नवीनतम खबरें, सरकारी योजनाएं, गाइड और अपडेट</p>
+        
+        <div class="blog-categories">
+            <button class="category-btn active">सभी</button>
+            <button class="category-btn">सरकारी योजनाएं</button>
+            <button class="category-btn">शिक्षा</button>
+            <button class="category-btn">व्यापार</button>
+            <button class="category-btn">स्वास्थ्य</button>
+            <button class="category-btn">पर्यटन</button>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="blog-layout">
+            <!-- Main Blog Content -->
+            <div class="blog-main">
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600" alt="Government Scheme" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category">सरकारी योजना</span>
+                            <h3 class="blog-title">
+                                <a href="sehorebirthcertificate.html">सीहोर में बर्थ सर्टिफिकेट कैसे बनवाएं - कम्पलीट गाइड</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 27 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 5 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 1.2k देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर शहर में बर्थ सर्टिफिकेट बनवाने की पूरी प्रक्रिया, आवश्यक दस्तावेज, ऑनलाइन और ऑफलाइन तरीके, फीस और महत्वपूर्ण जानकारी।
+                            </p>
+                            <a href="sehorebirthcertificate.html" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600" alt="Business Ideas" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category" style="background: #10b981;">व्यापार</span>
+                            <h3 class="blog-title">
+                                <a href="#">सीहोर में बिज़नेस शुरू करने के बेस्ट आइडियाज - 2026</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 26 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 7 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 980 देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर में लो इन्वेस्टमेंट और हाई डिमांड वाले बिज़नेस आइडियाज। स्टार्टअप के लिए गवर्नमेंट स्कीम्स, लोन और मार्केट रिसर्च।
+                            </p>
+                            <a href="#" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600" alt="Tourist Places" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category" style="background: #8b5cf6;">पर्यटन</span>
+                            <h3 class="blog-title">
+                                <a href="places.html">सीहोर के प्रसिद्ध पर्यटन स्थल - कम्पलीट ट्रैवल गाइड</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 25 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 6 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 1.5k देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर जिले के सबसे खूबसूरत और ऐतिहासिक स्थलों की पूरी गाइड। कैसे पहुंचें, क्या देखें, बेस्ट टाइम और ट्रैवल टिप्स।
+                            </p>
+                            <a href="places.html" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600" alt="Education" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category" style="background: #f59e0b;">शिक्षा</span>
+                            <h3 class="blog-title">
+                                <a href="education.html">सीहोर के टॉप स्कूल और कॉलेज - एडमिशन गाइड 2026</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 24 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 8 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 1.1k देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर के बेस्ट स्कूल, कॉलेज और कोचिंग सेंटर्स की लिस्ट। फीस स्ट्रक्चर, एडमिशन प्रोसेस, फैसिलिटीज और सिलेबस।
+                            </p>
+                            <a href="education.html" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=600" alt="Real Estate" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category" style="background: #ec4899;">संपत्ति</span>
+                            <h3 class="blog-title">
+                                <a href="property.html">सीहोर में प्रॉपर्टी इन्वेस्टमेंट - बेस्ट एरिया और प्राइस ट्रेंड</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 23 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 9 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 890 देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर में प्रॉपर्टी मार्केट का कंप्लीट एनालिसिस। बेस्ट इन्वेस्टमेंट एरिया, प्राइस ट्रेंड, लोन ऑप्शन और लीगल प्रोसेस।
+                            </p>
+                            <a href="property.html" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600" alt="Healthcare" class="blog-image">
+                        <div class="blog-content">
+                            <span class="blog-category" style="background: #3b82f6;">स्वास्थ्य</span>
+                            <h3 class="blog-title">
+                                <a href="#">सीहोर में हेल्थकेयर फैसिलिटीज - हॉस्पिटल्स और स्पेशलिस्ट्स</a>
+                            </h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 22 जनवरी 2026</span>
+                                <span><i class="far fa-clock"></i> 6 मिनट पढ़ने</span>
+                                <span><i class="far fa-eye"></i> 750 देखे</span>
+                            </div>
+                            <p class="blog-excerpt">
+                                सीहोर की बेस्ट हेल्थकेयर फैसिलिटीज, हॉस्पिटल्स, क्लीनिक्स और स्पेशलिस्ट डॉक्टर्स। आयुष्मान भारत और अन्य हेल्थ स्कीम्स।
+                            </p>
+                            <a href="#" class="read-more">
+                                पूरा पढ़ें <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Recent Posts -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">ताजा लेख</h3>
+                    <ul class="recent-posts">
+                        <li class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=200" alt="Recent Post" class="recent-image">
+                            <div class="recent-content">
+                                <h4><a href="sehorebirthcertificate.html">बर्थ सर्टिफिकेट बनवाने की गाइड</a></h4>
+                                <div class="recent-date">27 जनवरी 2026</div>
+                            </div>
+                        </li>
+                        <li class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=200" alt="Recent Post" class="recent-image">
+                            <div class="recent-content">
+                                <h4><a href="#">बिज़नेस आइडियाज 2026</a></h4>
+                                <div class="recent-date">26 जनवरी 2026</div>
+                            </div>
+                        </li>
+                        <li class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=200" alt="Recent Post" class="recent-image">
+                            <div class="recent-content">
+                                <h4><a href="places.html">टूरिस्ट प्लेस गाइड</a></h4>
+                                <div class="recent-date">25 जनवरी 2026</div>
+                            </div>
+                        </li>
+                        <li class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=200" alt="Recent Post" class="recent-image">
+                            <div class="recent-content">
+                                <h4><a href="education.html">एडमिशन गाइड 2026</a></h4>
+                                <div class="recent-date">24 जनवरी 2026</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">श्रेणियाँ</h3>
+                    <ul class="categories-list">
+                        <li class="category-item">
+                            <a href="#">सरकारी योजनाएं</a>
+                            <span class="category-count">12</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">शिक्षा</a>
+                            <span class="category-count">8</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">व्यापार</a>
+                            <span class="category-count">15</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">स्वास्थ्य</a>
+                            <span class="category-count">7</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">पर्यटन</a>
+                            <span class="category-count">9</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">संपत्ति</a>
+                            <span class="category-count">11</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#">नौकरियां</a>
+                            <span class="category-count">6</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Popular Tags -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">लोकप्रिय टैग्स</h3>
+                    <div class="tags">
+                        <a href="#" class="tag">सीहोर समाचार</a>
+                        <a href="#" class="tag">योजनाएं</a>
+                        <a href="#" class="tag">शिक्षा</a>
+                        <a href="#" class="tag">बिज़नेस</a>
+                        <a href="#" class="tag">हेल्थकेयर</a>
+                        <a href="#" class="tag">पर्यटन</a>
+                        <a href="#" class="tag">प्रॉपर्टी</a>
+                        <a href="#" class="tag">जॉब्स</a>
+                        <a href="#" class="tag">गाइड</a>
+                        <a href="#" class="tag">अपडेट</a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">न्यूज़लेटर</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1rem;">
+                        नवीनतम अपडेट सीधे अपने इनबॉक्स में पाएं।
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="आपका ईमेल" style="margin-bottom: 1rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> सब्सक्राइब करें
+                        </button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 MySehore.in - Blog & News</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: rgba(255, 255, 255, 0.5);">
+                Stay Updated with Sehore <i class="fas fa-newspaper" style="color: var(--secondary);"></i>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Category filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.textContent;
+                
+                // Update active button
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter blog cards
+                blogCards.forEach(card => {
+                    if(category === 'सभी') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        const cardCategory = card.querySelector('.blog-category').textContent;
+                        
+                        if(cardCategory === category) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Newsletter form
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if(newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                if(email) {
+                    alert('धन्यवाद! आप सफलतापूर्वक सब्सक्राइब हो गए हैं।');
+                    this.reset();
+                }
+            });
+        }
+        
+        // Menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if(menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

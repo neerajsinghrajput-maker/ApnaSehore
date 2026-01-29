@@ -1,113 +1,779 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Shops in Sehore</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दुकानें - सीहोर | MySehore.in</title>
+    <meta name="description" content="सीहोर की सभी दुकानें, शॉपिंग स्टोर्स, मार्केट और व्यापारिक प्रतिष्ठान">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .shops-hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shops-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 70%);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        .shops-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .shops-hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+        
+        .shop-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .shop-cat-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--light-border);
+            border-radius: var(--radius-full);
+            color: var(--text-medium);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .shop-cat-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .shop-cat-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .shops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .shop-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeIn 0.6s ease backwards;
+        }
+        
+        .shop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .shop-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .shop-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+        
+        .shop-card:hover .shop-image {
+            transform: scale(1.05);
+        }
+        
+        .shop-content {
+            padding: 1.5rem;
+        }
+        
+        .shop-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .shop-category {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .shop-details {
+            margin: 1.5rem 0;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-medium);
+        }
+        
+        .detail-item i {
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .shop-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        .shop-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .call-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .call-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .direction-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .direction-btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        .shop-hours {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+        
+        .featured-shops {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+        }
+        
+        .featured-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .featured-shop {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+        }
+        
+        .featured-shop:hover {
+            transform: translateY(-5px);
+        }
+        
+        .shop-card:nth-child(1) { animation-delay: 0.1s; }
+        .shop-card:nth-child(2) { animation-delay: 0.2s; }
+        .shop-card:nth-child(3) { animation-delay: 0.3s; }
+        .shop-card:nth-child(4) { animation-delay: 0.4s; }
+        .shop-card:nth-child(5) { animation-delay: 0.5s; }
+        .shop-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">🛍️ Shops – <span>Sehore</span></div>
-  <a href="index.html" 
-     style="
-       display: inline-block;
-       padding: 10px 20px;
-       background: #ffcc00;
-       color: #0d47a1;
-       text-decoration: none;
-       font-weight: bold;
-       border-radius: 8px;
-       border: 2px solid #0d47a1;
-       transition: all 0.3s ease;
-     "
-     onmouseover="this.style.background='#0d47a1'; this.style.color='#ffcc00'; this.style.borderColor='#ffcc00';"
-     onmouseout="this.style.background='#ffcc00'; this.style.color='#0d47a1'; this.style.borderColor='#0d47a1';"
-  >
-    Back to Home
-  </a>
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="logo-text">
+                My<span>Sehore</span>
+            </div>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> होम
+            </a>
+            <a href="shops.html" class="nav-link active">
+                <i class="fas fa-store"></i> दुकानें
+            </a>
+            <a href="add-business.html" class="cta-button">
+                <i class="fas fa-plus-circle"></i> दुकान जोड़ें
+            </a>
+        </nav>
+    </div>
 </header>
 
-<div class="coming-soon">
-  Available Soon After Partnership
-</div>
-
-<section class="section">
-  <div class="grid">
-
-    <!-- SHOP 1 -->
-    <div class="inner-card" onclick="toggleDetails('sh1')">
-      🛒 Verma General Store
-      <div class="details" id="sh1">
-        <p><b>Category:</b> Grocery</p>
-        <p><b>Location:</b> Bhopal Naka</p>
-        <p><b>Timing:</b> 8 AM – 10 PM</p>
-        <p><b>Contact:</b> 9XXXXXXXXX</p>
-      </div>
+<section class="shops-hero">
+    <div class="container">
+        <h1>सीहोर की दुकानें</h1>
+        <p>सभी स्थानीय व्यापार, शॉपिंग स्टोर्स और बाजारों की जानकारी</p>
+        
+        <div class="shop-categories">
+            <button class="shop-cat-btn active" data-category="all">
+                <i class="fas fa-th-large"></i> सभी
+            </button>
+            <button class="shop-cat-btn" data-category="grocery">
+                <i class="fas fa-shopping-basket"></i> किराना
+            </button>
+            <button class="shop-cat-btn" data-category="electronics">
+                <i class="fas fa-mobile-alt"></i> इलेक्ट्रॉनिक्स
+            </button>
+            <button class="shop-cat-btn" data-category="clothing">
+                <i class="fas fa-tshirt"></i> कपड़े
+            </button>
+            <button class="shop-cat-btn" data-category="medical">
+                <i class="fas fa-pills"></i> मेडिकल
+            </button>
+            <button class="shop-cat-btn" data-category="hardware">
+                <i class="fas fa-tools"></i> हार्डवेयर
+            </button>
+            <button class="shop-cat-btn" data-category="food">
+                <i class="fas fa-utensils"></i> फूड
+            </button>
+            <button class="shop-cat-btn" data-category="books">
+                <i class="fas fa-book"></i> किताबें
+            </button>
+        </div>
     </div>
-
-    <!-- SHOP 2 -->
-    <div class="inner-card" onclick="toggleDetails('sh2')">
-      📱 Mobile Zone
-      <div class="details" id="sh2">
-        <p><b>Category:</b> Mobile & Accessories</p>
-        <p><b>Brands:</b> Samsung, Redmi</p>
-        <p><b>Location:</b> Bus Stand Area</p>
-      </div>
-    </div>
-
-    <!-- SHOP 3 -->
-    <div class="inner-card" onclick="toggleDetails('sh3')">
-      👕 Fashion Point
-      <div class="details" id="sh3">
-        <p><b>Category:</b> Clothing</p>
-        <p><b>For:</b> Men / Women</p>
-        <p><b>Location:</b> Sehore City</p>
-      </div>
-    </div>
-
-    <!-- SHOP 4 -->
-    <div class="inner-card" onclick="toggleDetails('sh4')">
-      🥦 Fresh Veg Market
-      <div class="details" id="sh4">
-        <p><b>Category:</b> Vegetable Shop</p>
-        <p><b>Fresh:</b> Daily</p>
-        <p><b>Location:</b> Old Sehore</p>
-      </div>
-    </div>
-
-    <!-- SHOP 5 -->
-    <div class="inner-card" onclick="toggleDetails('sh5')">
-      🛠️ Hardware Store
-      <div class="details" id="sh5">
-        <p><b>Category:</b> Construction Material</p>
-        <p><b>Items:</b> Cement, Paint, Tools</p>
-        <p><b>Location:</b> Indore Road</p>
-      </div>
-    </div>
-
-    <!-- SHOP 6 -->
-    <div class="inner-card" onclick="toggleDetails('sh6')">
-      🍰 Sweet & Bakery
-      <div class="details" id="sh6">
-        <p><b>Category:</b> Bakery & Sweets</p>
-        <p><b>Special:</b> Cakes, Namkeen</p>
-        <p><b>Location:</b> College Area</p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
+<section class="section">
+    <div class="container">
+        <!-- Featured Shops -->
+        <div class="featured-shops">
+            <div class="featured-header">
+                <h2 style="margin: 0;">फीचर्ड दुकानें</h2>
+                <a href="#" class="btn btn-outline">सभी देखें</a>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="featured-shop">
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.8
+                        <span class="text-sm" style="color: var(--text-light);">(245 रिव्यू)</span>
+                    </div>
+                    <h4 style="margin: 0.5rem 0;">वर्मा जनरल स्टोर</h4>
+                    <p style="color: var(--text-medium); font-size: 0.9rem; margin-bottom: 1rem;">
+                        भोपाल नाका की सबसे पुरानी किराना दुकान
+                    </p>
+                    <a href="#" class="btn btn-sm btn-primary">विजिट करें</a>
+                </div>
+                
+                <div class="featured-shop">
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.9
+                        <span class="text-sm" style="color: var(--text-light);">(189 रिव्यू)</span>
+                    </div>
+                    <h4 style="margin: 0.5rem 0;">मोबाइल ज़ोन</h4>
+                    <p style="color: var(--text-medium); font-size: 0.9rem; margin-bottom: 1rem;">
+                        ऑथेंटिक मोबाइल और एक्सेसरीज
+                    </p>
+                    <a href="#" class="btn btn-sm btn-primary">विजिट करें</a>
+                </div>
+                
+                <div class="featured-shop">
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.7
+                        <span class="text-sm" style="color: var(--text-light);">(156 रिव्यू)</span>
+                    </div>
+                    <h4 style="margin: 0.5rem 0;">फ़्रेश वेज मार्केट</h4>
+                    <p style="color: var(--text-medium); font-size: 0.9rem; margin-bottom: 1rem;">
+                        ताज़ी सब्ज़ियाँ और फल
+                    </p>
+                    <a href="#" class="btn btn-sm btn-primary">विजिट करें</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- All Shops -->
+        <div class="shops-grid">
+            <!-- Shop 1 -->
+            <div class="shop-card" data-category="grocery">
+                <span class="shop-badge">Popular</span>
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600" alt="General Store" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">वर्मा जनरल स्टोर</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>किराना दुकान</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> भोपाल नाका, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-history"></i>
+                            <span><strong>स्थापना:</strong> 1995</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-boxes"></i>
+                            <span><strong>प्रोडक्ट्स:</strong> सभी किराना सामान</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-truck"></i>
+                            <span><strong>होम डिलीवरी:</strong> हां</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span><strong>पेमेंट:</strong> कैश/UPI/कार्ड</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.8/5 (245 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 8 बजे - रात 10 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="https://maps.google.com/?q=Verma+General+Store+Sehore" target="_blank" class="direction-btn">
+                            <i class="fas fa-directions"></i> रास्ता
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop 2 -->
+            <div class="shop-card" data-category="electronics">
+                <span class="shop-badge" style="background: var(--success);">Verified</span>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=600" alt="Mobile Shop" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">मोबाइल ज़ोन</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>मोबाइल और इलेक्ट्रॉनिक्स</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> बस स्टैंड एरिया</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span><strong>ब्रांड्स:</strong> Samsung, Redmi, Oppo, Vivo</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wrench"></i>
+                            <span><strong>सर्विस:</strong> मोबाइल रिपेयर और एक्सेसरीज</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span><strong>वारंटी:</strong> ब्रांड वारंटी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-percentage"></i>
+                            <span><strong>ऑफर:</strong> EMI उपलब्ध</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.9/5 (189 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 10 बजे - शाम 9 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="direction-btn">
+                            <i class="fas fa-shopping-cart"></i> ऑनलाइन शॉप
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop 3 -->
+            <div class="shop-card" data-category="clothing">
+                <span class="shop-badge" style="background: #8b5cf6;">Fashion</span>
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=600" alt="Clothing Store" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">फैशन पॉइंट</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>कपड़ों की दुकान</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> सीहोर सिटी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tshirt"></i>
+                            <span><strong>के लिए:</strong> पुरुष और महिलाएं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span><strong>प्रोडक्ट्स:</strong> ट्रेडिशनल और वेस्टर्न</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-ruler"></i>
+                            <span><strong>सर्विस:</strong> स्टिचिंग और अल्टरेशन</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tag"></i>
+                            <span><strong>प्राइस रेंज:</strong> ₹500 - ₹5000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.7/5 (167 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 10 बजे - शाम 8 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="direction-btn">
+                            <i class="fas fa-images"></i> कलेक्शन
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop 4 -->
+            <div class="shop-card" data-category="food">
+                <span class="shop-badge" style="background: #ec4899;">Fresh</span>
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Vegetable Shop" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">फ़्रेश वेज मार्केट</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>सब्ज़ी और फल की दुकान</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> ओल्ड सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-leaf"></i>
+                            <span><strong>फ्रेश:</strong> रोज़ाना नई सब्ज़ियाँ</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-seedling"></i>
+                            <span><strong>ऑर्गेनिक:</strong> केमिकल फ्री सब्ज़ियाँ</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <span><strong>वज़न:</strong> डिजिटल वज़न</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-home"></i>
+                            <span><strong>होम डिलीवरी:</strong> मिनिमम ₹200 ऑर्डर</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.9/5 (203 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 6 बजे - दोपहर 2 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="direction-btn">
+                            <i class="fas fa-leaf"></i> टुडे स्पेशल
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop 5 -->
+            <div class="shop-card" data-category="hardware">
+                <span class="shop-badge" style="background: var(--warning);">Hardware</span>
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600" alt="Hardware Store" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">हार्डवेयर स्टोर</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>हार्डवेयर और कंस्ट्रक्शन</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> इंदौर रोड</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tools"></i>
+                            <span><strong>आइटम्स:</strong> सीमेंट, पेंट, टूल्स, फिटिंग्स</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-truck-loading"></i>
+                            <span><strong>डिलीवरी:</strong> फ्री डिलीवरी (500+ ऑर्डर)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span><strong>क्वालिटी:</strong> ब्रांडेड प्रोडक्ट्स</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>कस्टमर:</strong> होम और कंट्रैक्टर दोनों</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.6/5 (134 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 9 बजे - शाम 7 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="direction-btn">
+                            <i class="fas fa-file-invoice"></i> कोटेशन
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop 6 -->
+            <div class="shop-card" data-category="food">
+                <span class="shop-badge" style="background: #10b981;">Sweet</span>
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600" alt="Sweet Shop" class="shop-image">
+                <div class="shop-content">
+                    <h3 class="shop-title">स्वीट एंड बेकरी</h3>
+                    <div class="shop-category">
+                        <i class="fas fa-tag"></i>
+                        <span>मिठाई और बेकरी</span>
+                    </div>
+                    
+                    <div class="shop-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> कॉलेज एरिया</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span><strong>स्पेशल:</strong> केक, मिठाई, नमकीन</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-oven"></i>
+                            <span><strong>बेक्ड फ्रेश:</strong> डेली फ्रेश बेकरी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-gift"></i>
+                            <span><strong>गिफ्ट पैकिंग:</strong> फ्री गिफ�्ट पैकिंग</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><strong>प्री-बुकिंग:</strong> फेस्टिवल ऑर्डर</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-rating">
+                        <i class="fas fa-star"></i> 4.8/5 (178 रिव्यू)
+                    </div>
+                    
+                    <div class="shop-hours">
+                        <i class="fas fa-clock"></i> समय: सुबह 8 बजे - रात 10 बजे
+                    </div>
+                    
+                    <div class="shop-actions">
+                        <a href="tel:+919329050745" class="call-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="direction-btn">
+                            <i class="fas fa-shopping-cart"></i> ऑनलाइन ऑर्डर
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add Shop CTA -->
+        <div class="text-center mt-4 mb-4">
+            <a href="add-business.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus-circle"></i> अपनी दुकान जोड़ें
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 MySehore.in - Shops Directory</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: rgba(255, 255, 255, 0.5);">
+                Shop Local, Support Sehore <i class="fas fa-store" style="color: var(--secondary);"></i>
+            </p>
+        </div>
+    </div>
+</footer>
+
 <script>
-function toggleDetails(id) {
-  let all = document.querySelectorAll('.details');
-  all.forEach(d => d.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        // Category filtering
+        const categoryBtns = document.querySelectorAll('.shop-cat-btn');
+        const shopCards = document.querySelectorAll('.shop-card');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update active button
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter shop cards
+                shopCards.forEach(card => {
+                    if(category === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if(cardCategory === category) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if(menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
+
 </body>
 </html>

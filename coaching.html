@@ -1,122 +1,634 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Coaching in Sehore</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कोचिंग सेंटर - सीहोर | MySehore.in</title>
+    <meta name="description" content="सीहोर के सभी कोचिंग सेंटर, ट्यूशन क्लासेज, प्रतियोगी परीक्षा कोचिंग और प्रोफेशनल कोर्सेज">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .coaching-hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .coaching-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 70%);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        .coaching-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .coaching-hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+        
+        .coaching-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--light-bg);
+            border: 2px solid var(--light-border);
+            border-radius: var(--radius-full);
+            color: var(--text-medium);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .coaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .coaching-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeIn 0.6s ease backwards;
+            position: relative;
+        }
+        
+        .coaching-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .coaching-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .coaching-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .coaching-content {
+            padding: 1.5rem;
+        }
+        
+        .coaching-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .coaching-category {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .coaching-details {
+            margin: 1.5rem 0;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-medium);
+        }
+        
+        .detail-item i {
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .coaching-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .details-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .details-btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        .coaching-card:nth-child(1) { animation-delay: 0.1s; }
+        .coaching-card:nth-child(2) { animation-delay: 0.2s; }
+        .coaching-card:nth-child(3) { animation-delay: 0.3s; }
+        .coaching-card:nth-child(4) { animation-delay: 0.4s; }
+        .coaching-card:nth-child(5) { animation-delay: 0.5s; }
+        .coaching-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">📚 Coaching – <span>Sehore</span></div>
-  <a href="index.html" 
-     style="
-       display: inline-block;
-       padding: 10px 20px;
-       background: #ffcc00;
-       color: #0d47a1;
-       text-decoration: none;
-       font-weight: bold;
-       border-radius: 8px;
-       border: 2px solid #0d47a1;
-       transition: all 0.3s ease;
-     "
-     onmouseover="this.style.background='#0d47a1'; this.style.color='#ffcc00'; this.style.borderColor='#ffcc00';"
-     onmouseout="this.style.background='#ffcc00'; this.style.color='#0d47a1'; this.style.borderColor='#0d47a1';"
-  >
-    Back to Home
-  </a>
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="logo-text">
+                My<span>Sehore</span>
+            </div>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> होम
+            </a>
+            <a href="coaching.html" class="nav-link active">
+                <i class="fas fa-chalkboard-teacher"></i> कोचिंग
+            </a>
+            <a href="add-business.html" class="cta-button">
+                <i class="fas fa-plus-circle"></i> कोचिंग जोड़ें
+            </a>
+        </nav>
+    </div>
 </header>
 
-<div class="coming-soon">
-  Available Soon After Partnership
-</div>
-
-<section class="section">
-  <div class="grid">
-
-    <!-- COACHING 1 -->
-    <div class="inner-card" onclick="toggleDetails('c1')">
-      📘 Success Coaching
-      <div class="details" id="c1">
-        <p><b>Subjects:</b> Maths, Science</p>
-        <p><b>Classes:</b> 8th – 10th</p>
-        <p><b>Fees:</b> ₹1,200 / month</p>
-        <p><b>Location:</b> Bhopal Naka</p>
-      </div>
+<section class="coaching-hero">
+    <div class="container">
+        <h1>सीहोर के कोचिंग सेंटर</h1>
+        <p>स्कूल, कॉलेज, प्रतियोगी परीक्षाओं और प्रोफेशनल कोर्सेज की तैयारी</p>
+        
+        <div class="coaching-filter">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th-large"></i> सभी कोचिंग
+            </button>
+            <button class="filter-btn" data-filter="school">
+                <i class="fas fa-school"></i> स्कूल कोचिंग
+            </button>
+            <button class="filter-btn" data-filter="college">
+                <i class="fas fa-graduation-cap"></i> कॉलेज कोचिंग
+            </button>
+            <button class="filter-btn" data-filter="competitive">
+                <i class="fas fa-file-alt"></i> प्रतियोगी परीक्षाएं
+            </button>
+            <button class="filter-btn" data-filter="computer">
+                <i class="fas fa-laptop-code"></i> कंप्यूटर कोर्स
+            </button>
+        </div>
     </div>
-
-    <!-- COACHING 2 -->
-    <div class="inner-card" onclick="toggleDetails('c2')">
-      📗 Bright Future Academy
-      <div class="details" id="c2">
-        <p><b>Subjects:</b> PCM</p>
-        <p><b>Classes:</b> 11th – 12th</p>
-        <p><b>Fees:</b> ₹2,000 / month</p>
-        <p><b>Location:</b> Sehore City</p>
-      </div>
-    </div>
-
-    <!-- COACHING 3 -->
-    <div class="inner-card" onclick="toggleDetails('c3')">
-      🧮 Genius Maths Classes
-      <div class="details" id="c3">
-        <p><b>Subject:</b> Mathematics</p>
-        <p><b>Classes:</b> 6th – 10th</p>
-        <p><b>Fees:</b> ₹1,000 / month</p>
-        <p><b>Teacher:</b> R. Sharma</p>
-      </div>
-    </div>
-
-    <!-- COACHING 4 -->
-    <div class="inner-card" onclick="toggleDetails('c4')">
-      💻 Computer Point
-      <div class="details" id="c4">
-        <p><b>Courses:</b> Basic, DCA, Tally</p>
-        <p><b>Duration:</b> 3–6 Months</p>
-        <p><b>Fees:</b> ₹3,000+</p>
-        <p><b>Location:</b> Bus Stand Area</p>
-      </div>
-    </div>
-
-    <!-- COACHING 5 -->
-    <div class="inner-card" onclick="toggleDetails('c5')">
-      🏫 Career Institute
-      <div class="details" id="c5">
-        <p><b>Preparation:</b> Govt Exams</p>
-        <p><b>Exams:</b> Patwari, Police</p>
-        <p><b>Fees:</b> ₹2,500 / month</p>
-        <p><b>Mode:</b> Offline</p>
-      </div>
-    </div>
-
-    <!-- COACHING 6 -->
-    <div class="inner-card" onclick="toggleDetails('c6')">
-      ✍️ Spoken English Hub
-      <div class="details" id="c6">
-        <p><b>Course:</b> Spoken English</p>
-        <p><b>Duration:</b> 2 Months</p>
-        <p><b>Fees:</b> ₹1,500</p>
-        <p><b>Batch:</b> Morning / Evening</p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
+<section class="section">
+    <div class="container">
+        <div class="coaching-grid">
+            <!-- Coaching 1 -->
+            <div class="coaching-card" data-category="school">
+                <span class="coaching-badge">Verified</span>
+                <div class="coaching-image">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">सक्सेस कोचिंग सेंटर</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>स्कूल कोचिंग</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>विषय:</strong> गणित, विज्ञान, अंग्रेजी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> 8वीं - 10वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹1,200 / माह</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> भोपाल नाका, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span><strong>शिक्षक:</strong> अनुभवी पीजीटी टीचर्स</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="coaching-details.html" class="details-btn">
+                            <i class="fas fa-info-circle"></i> विवरण
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coaching 2 -->
+            <div class="coaching-card" data-category="college">
+                <span class="coaching-badge" style="background: var(--success)">Premium</span>
+                <div class="coaching-image">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">ब्राइट फ्यूचर एकेडमी</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>कॉलेज कोचिंग</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>विषय:</strong> PCM (Physics, Chemistry, Maths)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> 11वीं - 12वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹2,000 / माह</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> सीहोर सिटी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>रिजल्ट:</strong> 95% सफलता दर</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="details-btn">
+                            <i class="fas fa-calendar"></i> बैच शेड्यूल
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coaching 3 -->
+            <div class="coaching-card" data-category="school">
+                <span class="coaching-badge" style="background: var(--warning)">New</span>
+                <div class="coaching-image">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">जीनियस मैथ्स क्लासेज</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>स्कूल कोचिंग</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>विषय:</strong> केवल गणित</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> 6वीं - 10वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹1,000 / माह</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span><strong>शिक्षक:</strong> श्री आर. शर्मा (15 वर्ष अनुभव)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-award"></i>
+                            <span><strong>विशेष:</strong> कांसेप्ट बिल्डिंग</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="details-btn">
+                            <i class="fas fa-file-download"></i> सिलेबस
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coaching 4 -->
+            <div class="coaching-card" data-category="computer">
+                <span class="coaching-badge">Professional</span>
+                <div class="coaching-image">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">कंप्यूटर पॉइंट</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>कंप्यूटर कोर्स</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>कोर्स:</strong> बेसिक, DCA, Tally, प्रोग्रामिंग</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>अवधि:</strong> 3-6 महीने</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹3,000 से शुरू</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> बस स्टैंड एरिया, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <span><strong>सर्टिफिकेट:</strong> सरकारी मान्यता प्राप्त</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="details-btn">
+                            <i class="fas fa-list"></i> कोर्स लिस्ट
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coaching 5 -->
+            <div class="coaching-card" data-category="competitive">
+                <span class="coaching-badge" style="background: #8b5cf6">Govt Job</span>
+                <div class="coaching-image">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">कैरियर इंस्टीट्यूट</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>प्रतियोगी परीक्षाएं</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>तैयारी:</strong> पटवारी, पुलिस, SSC, बैंकिंग</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>परीक्षाएं:</strong> सभी सरकारी नौकरी</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹2,500 / माह</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-chalkboard"></i>
+                            <span><strong>मोड:</strong> ऑफलाइन क्लासेज</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>बैच:</strong> छोटे बैच (20 छात्र)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="details-btn">
+                            <i class="fas fa-newspaper"></i> नोट्स
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coaching 6 -->
+            <div class="coaching-card" data-category="computer">
+                <span class="coaching-badge" style="background: #ec4899">Language</span>
+                <div class="coaching-image">
+                    <i class="fas fa-language"></i>
+                </div>
+                <div class="coaching-content">
+                    <h3 class="coaching-title">स्पोकन इंग्लिश हब</h3>
+                    <div class="coaching-category">
+                        <i class="fas fa-tag"></i>
+                        <span>भाषा कोर्स</span>
+                    </div>
+                    
+                    <div class="coaching-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span><strong>कोर्स:</strong> स्पोकन इंग्लिश</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>अवधि:</strong> 2 महीने</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span><strong>फीस:</strong> ₹1,500 (पूरा कोर्स)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <span><strong>बैच:</strong> सुबह/शाम</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-microphone"></i>
+                            <span><strong>विशेष:</strong> फ्लुएंसी ट्रेनिंग</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coaching-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="details-btn">
+                            <i class="fas fa-play-circle"></i> डेमो क्लास
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add Coaching CTA -->
+        <div class="text-center mt-4 mb-4">
+            <a href="add-business.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus-circle"></i> अपना कोचिंग सेंटर जोड़ें
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 MySehore.in - Education Directory</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: rgba(255, 255, 255, 0.5);">
+                Quality Education in Sehore <i class="fas fa-graduation-cap" style="color: var(--secondary);"></i>
+            </p>
+        </div>
+    </div>
+</footer>
 
 <script>
-function toggleDetails(id) {
-  let all = document.querySelectorAll('.details');
-  all.forEach(d => d.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const coachingCards = document.querySelectorAll('.coaching-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                coachingCards.forEach(card => {
+                    if(filter === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if(cardCategory === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if(menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+    });
 </script>
-<div id="container-654c49c33236e6175a0b15013a739bbd"></div>
-<script async="async" data-cfasync="false" src="https://pl28583642.effectivegatecpm.com/654c49c33236e6175a0b15013a739bbd/invoke.js"></script>
+
 </body>
 </html>

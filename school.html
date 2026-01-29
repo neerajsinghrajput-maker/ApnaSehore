@@ -1,102 +1,769 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>School in Sehore</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्कूल - सीहोर | MySehore.in</title>
+    <meta name="description" content="सीहोर के सभी स्कूल, पब्लिक और प्राइवेट स्कूल, एडमिशन और फीस जानकारी">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .school-hero {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .school-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 70%);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        .school-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .school-hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+        
+        .school-types {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .type-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--light-border);
+            border-radius: var(--radius-full);
+            color: var(--text-medium);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .type-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .type-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .school-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            animation: fadeIn 0.6s ease backwards;
+        }
+        
+        .school-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .school-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .school-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .school-content {
+            padding: 1.5rem;
+        }
+        
+        .school-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .school-board {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .school-details {
+            margin: 1.5rem 0;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-medium);
+        }
+        
+        .detail-item i {
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .school-fees {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+        }
+        
+        .fees-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .fees-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .school-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .admission-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .admission-btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        .school-facilities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .facility-tag {
+            background: var(--light-bg);
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .admission-alert {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .alert-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .alert-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        .school-card:nth-child(1) { animation-delay: 0.1s; }
+        .school-card:nth-child(2) { animation-delay: 0.2s; }
+        .school-card:nth-child(3) { animation-delay: 0.3s; }
+        .school-card:nth-child(4) { animation-delay: 0.4s; }
+        .school-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">🏫 Schools – <span>Sehore</span></div>
-  <a href="index.html" 
-     style="
-       display: inline-block;
-       padding: 10px 20px;
-       background: #ffcc00;
-       color: #0d47a1;
-       text-decoration: none;
-       font-weight: bold;
-       border-radius: 8px;
-       border: 2px solid #0d47a1;
-       transition: all 0.3s ease;
-     "
-     onmouseover="this.style.background='#0d47a1'; this.style.color='#ffcc00'; this.style.borderColor='#ffcc00';"
-     onmouseout="this.style.background='#ffcc00'; this.style.color='#0d47a1'; this.style.borderColor='#0d47a1';"
-  >
-    Back to Home
-  </a>
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="logo-text">
+                My<span>Sehore</span>
+            </div>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> होम
+            </a>
+            <a href="school.html" class="nav-link active">
+                <i class="fas fa-school"></i> स्कूल
+            </a>
+            <a href="add-business.html" class="cta-button">
+                <i class="fas fa-plus-circle"></i> स्कूल जोड़ें
+            </a>
+        </nav>
+    </div>
 </header>
 
-<div class="coming-soon">
-  More Available Soon 
-</div>
+<section class="school-hero">
+    <div class="container">
+        <h1>सीहोर के स्कूल</h1>
+        <p>बेस्ट स्कूल, एडमिशन प्रोसेस, फीस और शैक्षणिक सुविधाएं</p>
+        
+        <div class="school-types">
+            <button class="type-btn active" data-type="all">
+                <i class="fas fa-th-large"></i> सभी स्कूल
+            </button>
+            <button class="type-btn" data-type="cbse">
+                <i class="fas fa-star"></i> CBSE बोर्ड
+            </button>
+            <button class="type-btn" data-type="mpboard">
+                <i class="fas fa-landmark"></i> MP बोर्ड
+            </button>
+            <button class="type-btn" data-type="government">
+                <i class="fas fa-university"></i> सरकारी स्कूल
+            </button>
+            <button class="type-btn" data-type="private">
+                <i class="fas fa-building"></i> प्राइवेट स्कूल
+            </button>
+        </div>
+    </div>
+</section>
 
 <section class="section">
-  <div class="grid">
-
-    <!-- SCHOOL 1 -->
-    <div class="inner-card" onclick="toggleDetails('sc1')">
-      🏫 Govt Excellence Higher Secondary School
-      <div class="details" id="sc1">
-        <p><b>Board:</b> MP Board</p>
-        <p><b>Classes:</b> 9th – 12th</p>
-        <p><b>Location:</b> tehsil chouraha sehore</p>
-      </div>
+    <div class="container">
+        <!-- Admission Alert -->
+        <div class="admission-alert">
+            <div class="alert-content">
+                <div class="alert-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">2026-27 एडमिशन शुरू</h3>
+                    <p style="color: var(--text-medium);">अधिकतर स्कूलों में एडमिशन प्रोसेस शुरू हो चुका है। जल्दी करें!</p>
+                </div>
+                <a href="#admission" class="btn btn-primary">
+                    <i class="fas fa-file-alt"></i> एडमिशन गाइड
+                </a>
+            </div>
+        </div>
+        
+        <!-- School Grid -->
+        <div class="school-grid">
+            <!-- School 1 -->
+            <div class="school-card" data-type="mpboard government">
+                <span class="school-badge">Government</span>
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600" alt="Government School" class="school-image">
+                <div class="school-content">
+                    <h3 class="school-title">गवर्नमेंट एक्सीलेंस हायर सेकेंडरी स्कूल</h3>
+                    <div class="school-board">
+                        <i class="fas fa-tag"></i>
+                        <span>MP बोर्ड - सरकारी स्कूल</span>
+                    </div>
+                    
+                    <div class="school-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> 9वीं - 12वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> तहसील चौराहा, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>छात्र:</strong> 2000+</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span><strong>शिक्षक:</strong> 45+</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-stream"></i>
+                            <span><strong>स्ट्रीम्स:</strong> साइंस, कॉमर्स, आर्ट्स</span>
+                        </div>
+                    </div>
+                    
+                    <div class="school-facilities">
+                        <span class="facility-tag"><i class="fas fa-flask"></i> साइंस लैब</span>
+                        <span class="facility-tag"><i class="fas fa-book"></i> लाइब्रेरी</span>
+                        <span class="facility-tag"><i class="fas fa-futbol"></i> स्पोर्ट्स</span>
+                        <span class="facility-tag"><i class="fas fa-bus"></i> बस सुविधा</span>
+                    </div>
+                    
+                    <div class="school-fees">
+                        <div class="fees-title">वार्षिक फीस</div>
+                        <div class="fees-amount">₹5,000 - ₹8,000</div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                            * सरकारी स्कीम्स के तहत छूट उपलब्ध
+                        </p>
+                    </div>
+                    
+                    <div class="school-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="admission-form.html" class="admission-btn">
+                            <i class="fas fa-file-alt"></i> एडमिशन फॉर्म
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- School 2 -->
+            <div class="school-card" data-type="cbse private">
+                <span class="school-badge" style="background: var(--success);">CBSE</span>
+                <img src="https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?q=80&w=600" alt="CBSE School" class="school-image">
+                <div class="school-content">
+                    <h3 class="school-title">सी.एम. राइज स्कूल</h3>
+                    <div class="school-board">
+                        <i class="fas fa-tag"></i>
+                        <span>CBSE बोर्ड - प्राइवेट स्कूल</span>
+                    </div>
+                    
+                    <div class="school-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> नर्सरी - 12वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> मंडी रोड, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span><strong>स्थापना:</strong> 2005</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>रिजल्ट:</strong> 98% बोर्ड रिजल्ट</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-laptop"></i>
+                            <span><strong>टेक्नोलॉजी:</strong> स्मार्ट क्लासेज</span>
+                        </div>
+                    </div>
+                    
+                    <div class="school-facilities">
+                        <span class="facility-tag"><i class="fas fa-swimming-pool"></i> स्विमिंग पूल</span>
+                        <span class="facility-tag"><i class="fas fa-music"></i> म्यूजिक रूम</span>
+                        <span class="facility-tag"><i class="fas fa-robot"></i> रोबोटिक्स लैब</span>
+                        <span class="facility-tag"><i class="fas fa-wifi"></i> वाई-फाई कैम्पस</span>
+                    </div>
+                    
+                    <div class="school-fees">
+                        <div class="fees-title">वार्षिक फीस</div>
+                        <div class="fees-amount">₹25,000 - ₹35,000</div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                            * ट्रांसपोर्ट और यूनिफॉर्म अलग
+                        </p>
+                    </div>
+                    
+                    <div class="school-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="admission-btn">
+                            <i class="fas fa-calendar"></i> एडमिशन शेड्यूल
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- School 3 -->
+            <div class="school-card" data-type="mpboard private">
+                <span class="school-badge" style="background: var(--warning);">Top Rated</span>
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600" alt="Nutan School" class="school-image">
+                <div class="school-content">
+                    <h3 class="school-title">नूतन हायर सेकेंडरी स्कूल</h3>
+                    <div class="school-board">
+                        <i class="fas fa-tag"></i>
+                        <span>MP बोर्ड - प्राइवेट स्कूल</span>
+                    </div>
+                    
+                    <div class="school-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> केजी - 12वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> अंग्रेजी पुरा, भोपाल नाका</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-history"></i>
+                            <span><strong>स्थापना:</strong> 1985</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-award"></i>
+                            <span><strong>अवार्ड्स:</strong> बेस्ट स्कूल अवार्ड</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>अलुम्नाई:</strong> 5000+ सफल छात्र</span>
+                        </div>
+                    </div>
+                    
+                    <div class="school-facilities">
+                        <span class="facility-tag"><i class="fas fa-computer"></i> कंप्यूटर लैब</span>
+                        <span class="facility-tag"><i class="fas fa-microscope"></i> साइंस लैब</span>
+                        <span class="facility-tag"><i class="fas fa-paint-brush"></i> आर्ट रूम</span>
+                        <span class="facility-tag"><i class="fas fa-first-aid"></i> मेडिकल रूम</span>
+                    </div>
+                    
+                    <div class="school-fees">
+                        <div class="fees-title">वार्षिक फीस</div>
+                        <div class="fees-amount">₹15,000 - ₹22,000</div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                            * स्कॉलरशिप उपलब्ध
+                        </p>
+                    </div>
+                    
+                    <div class="school-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="admission-btn">
+                            <i class="fas fa-file-download"></i> प्रॉस्पेक्टस
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- School 4 -->
+            <div class="school-card" data-type="cbse private">
+                <span class="school-badge" style="background: #8b5cf6;">Premium</span>
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=600" alt="IES School" class="school-image">
+                <div class="school-content">
+                    <h3 class="school-title">आईईएस पब्लिक स्कूल</h3>
+                    <div class="school-board">
+                        <i class="fas fa-tag"></i>
+                        <span>CBSE बोर्ड - प्रीमियम स्कूल</span>
+                    </div>
+                    
+                    <div class="school-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> नर्सरी - 12वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> इंदौर रोड, सीहोर</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span><strong>रैंकिंग:</strong> टॉप 5 सीहोर में</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span><strong>प्लेसमेंट:</strong> कैरियर काउंसलिंग</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span><strong>करिकुलम:</strong> एकेडेमिक + को-करिकुलर</span>
+                        </div>
+                    </div>
+                    
+                    <div class="school-facilities">
+                        <span class="facility-tag"><i class="fas fa-dumbbell"></i> जिम</span>
+                        <span class="facility-tag"><i class="fas fa-chess"></i> शतरंज क्लब</span>
+                        <span class="facility-tag"><i class="fas fa-theater-masks"></i> ड्रामा क्लब</span>
+                        <span class="facility-tag"><i class="fas fa-camera"></i> फोटोग्राफी</span>
+                    </div>
+                    
+                    <div class="school-fees">
+                        <div class="fees-title">वार्षिक फीस</div>
+                        <div class="fees-amount">₹40,000 - ₹55,000</div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                            * इंफ्रास्ट्रक्चर चार्ज अलग
+                        </p>
+                    </div>
+                    
+                    <div class="school-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> संपर्क करें
+                        </a>
+                        <a href="#" class="admission-btn">
+                            <i class="fas fa-play-circle"></i> वर्चुअल टूर
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- School 5 -->
+            <div class="school-card" data-type="cbse private">
+                <span class="school-badge" style="background: #ec4899;">Rural</span>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600" alt="Oxford School" class="school-image">
+                <div class="school-content">
+                    <h3 class="school-title">ऑक्सफोर्ड पब्लिक स्कूल</h3>
+                    <div class="school-board">
+                        <i class="fas fa-tag"></i>
+                        <span>CBSE बोर्ड - रूरल स्कूल</span>
+                    </div>
+                    
+                    <div class="school-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>कक्षा:</strong> 1वीं - 10वीं</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>स्थान:</strong> सीहोर रूरल</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-home"></i>
+                            <span><strong>बोर्डिंग:</strong> डे-बोर्डिंग उपलब्ध</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-leaf"></i>
+                            <span><strong>कैम्पस:</strong> 5 एकड़ ग्रीन कैम्पस</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <span><strong>स्पेशल:</strong> कमजोर छात्रों के लिए एक्स्ट्रा क्लासेज</span>
+                        </div>
+                    </div>
+                    
+                    <div class="school-facilities">
+                        <span class="facility-tag"><i class="fas fa-tree"></i> गार्डन</span>
+                        <span class="facility-tag"><i class="fas fa-horse"></i> हॉर्स राइडिंग</span>
+                        <span class="facility-tag"><i class="fas fa-campground"></i> कैंपिंग</span>
+                        <span class="facility-tag"><i class="fas fa-seedling"></i> ऑर्गेनिक फार्मिंग</span>
+                    </div>
+                    
+                    <div class="school-fees">
+                        <div class="fees-title">वार्षिक फीस</div>
+                        <div class="fees-amount">₹18,000 - ₹25,000</div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                            * बोर्डिंग फीस अलग
+                        </p>
+                    </div>
+                    
+                    <div class="school-actions">
+                        <a href="tel:+919329050745" class="contact-btn">
+                            <i class="fas fa-phone"></i> 9329050745
+                        </a>
+                        <a href="#" class="admission-btn">
+                            <i class="fas fa-clipboard-list"></i> एडमिशन क्राइटेरिया
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Important Information -->
+        <div class="emergency-services" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%); margin: 3rem 0;">
+            <div class="emergency-header">
+                <div class="emergency-icon" style="color: var(--primary);">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">एडमिशन के लिए महत्वपूर्ण जानकारी</h3>
+                    <p style="color: var(--text-medium);">स्कूल एडमिशन से पहले यह जानकारी ध्यान से पढ़ें</p>
+                </div>
+            </div>
+            
+            <div class="emergency-grid">
+                <div class="emergency-card" style="border-left-color: var(--primary);">
+                    <h4 style="margin-bottom: 0.75rem;">आवश्यक दस्तावेज</h4>
+                    <ul style="color: var(--text-medium); margin-left: 1rem;">
+                        <li>जन्म प्रमाण पत्र</li>
+                        <li>पिछली कक्षा की मार्कशीट</li>
+                        <li>आधार कार्ड</li>
+                        <li>निवास प्रमाण पत्र</li>
+                        <li>पासपोर्ट साइज फोटो</li>
+                    </ul>
+                </div>
+                
+                <div class="emergency-card" style="border-left-color: var(--success);">
+                    <h4 style="margin-bottom: 0.75rem;">एडमिशन प्रक्रिया</h4>
+                    <ul style="color: var(--text-medium); margin-left: 1rem;">
+                        <li>फॉर्म भरना और जमा करना</li>
+                        <li>एंट्रेंस टेस्ट/इंटरव्यू</li>
+                        <li>डॉक्यूमेंट वेरिफिकेशन</li>
+                        <li>फीस जमा करना</li>
+                        <li>एडमिशन कन्फर्मेशन</li>
+                    </ul>
+                </div>
+                
+                <div class="emergency-card" style="border-left-color: var(--secondary);">
+                    <h4 style="margin-bottom: 0.75rem;">समय सीमा</h4>
+                    <ul style="color: var(--text-medium); margin-left: 1rem;">
+                        <li>फॉर्म जमा: 1 मार्च तक</li>
+                        <li>एंट्रेंस टेस्ट: 15 मार्च</li>
+                        <li>रिजल्ट: 20 मार्च</li>
+                        <li>फीस जमा: 25 मार्च तक</li>
+                        <li>सत्र शुरू: 1 अप्रैल</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add School CTA -->
+        <div class="text-center mt-4 mb-4">
+            <a href="add-business.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus-circle"></i> अपना स्कूल जोड़ें
+            </a>
+        </div>
     </div>
-
-    <!-- SCHOOL 2 -->
-    <div class="inner-card" onclick="toggleDetails('sc2')">
-      🎒 C.m.Rise School
-      <div class="details" id="sc2">
-        <p><b>Board:</b> CBSE</p>
-        <p><b>Classes:</b> Nursery – 10th</p>
-        <p><b>Location:</b> Mandi Road sehore</p>
-      </div>
-    </div>
-
-    <!-- SCHOOL 3 -->
-    <div class="inner-card" onclick="toggleDetails('sc3')">
-      📘 Nutan Higher Secondary school 
-      <div class="details" id="sc3">
-        <p><b>Board:</b> MP Board</p>
-        <p><b>Classes:</b> KG – 12th</p>
-        <p><b>Location:</b> English Pura Bhopal Naka </p>
-      </div>
-    </div>
-
-    <!-- SCHOOL 4 -->
-    <div class="inner-card" onclick="toggleDetails('sc4')">
-      🏫 Ies Public School
-      <div class="details" id="sc4">
-        <p><b>Board:</b> CBSE</p>
-        <p><b>Classes:</b> Nursery – 12th</p>
-        <p><b>Location:</b> Indore Road</p>
-      </div>
-    </div>
-
-    <!-- SCHOOL 5 -->
-    <div class="inner-card" onclick="toggleDetails('sc5')">
-      🎓 Oxford Public School
-      <div class="details" id="sc5">
-        <p><b>Board:</b> CBSE</p>
-        <p><b>Classes:</b> 1st – 10th</p>
-        <p><b>Location:</b> Sehore Rural</p>
-      </div>
-    </div>
-
-  </div>
 </section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 MySehore.in - Schools Directory</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: rgba(255, 255, 255, 0.5);">
+                Quality Education for Every Child <i class="fas fa-graduation-cap" style="color: var(--secondary);"></i>
+            </p>
+        </div>
+    </div>
+</footer>
+
 <script>
-function toggleDetails(id) {
-  let all = document.querySelectorAll('.details');
-  all.forEach(d => d.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        // Type filtering
+        const typeBtns = document.querySelectorAll('.type-btn');
+        const schoolCards = document.querySelectorAll('.school-card');
+        
+        typeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                
+                // Update active button
+                typeBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter school cards
+                schoolCards.forEach(card => {
+                    if(type === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        const cardTypes = card.getAttribute('data-type').split(' ');
+                        
+                        if(cardTypes.includes(type)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if(menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
