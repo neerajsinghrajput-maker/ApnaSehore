@@ -33,11 +33,9 @@ hook** and the **complete audio script**. Use it:
   Text values (FROZEN, SEIZED, DRAINED, DUBAI…) are allowed and show in pink.
 - Cards: pull the real rules and numbers the part explains (PMLA, FEMA limits, 30 % TDS, VARA, CRS…)
   into the cards; end card = "PART N+1" + the two options the script asks people to comment.
-- If the user asks for **image prompts** for Part N: write one 3x3 grid prompt — "ONE single square image,
-  comic storyboard grid of 9 equal panels, 3x3, thin white gutters and black panel borders, bold
-  outlined Indian comic style, moody purple/blue/pink night lighting; recurring hero: a man with a plain
-  white round ball head, simple dot eyes, blue checked shirt, jeans; no captions or speech bubbles except
-  short on-screen UI text" + 9 panel lines following the script's beats in order.
+- If the user asks for **image prompts** for Part N: fill `reference/grid_master_prompt.md` — keep its
+  fixed style/character/composition/text blocks word for word and write the 9 PANEL lines from that
+  part's script beats (panel 9 = the two comment options).
 
 ## Inputs (ask only for what is missing)
 1. **Grid image**: a 3x3 comic grid (any size; white or dark gutters). Panels are the story in order.
