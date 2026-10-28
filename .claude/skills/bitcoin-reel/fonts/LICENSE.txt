@@ -1,0 +1,2 @@
+Fonts from Fontsource (npm @fontsource/*): Inter, Mukta, JetBrains Mono, Teko.
+All are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org).

@@ -1,0 +1,714 @@
+{
+ "title": "₹5 Crore Bitcoin · Part 2 (Cash Deal)",
+ "tail": 0.8,
+ "hud": [
+  {
+   "label": "BITCOIN",
+   "type": "inr",
+   "width": 392,
+   "steps": [
+    [
+     0,
+     49600000
+    ],
+    [
+     35.4,
+     49400000
+    ]
+   ]
+  },
+  {
+   "label": "BANK",
+   "type": "inr",
+   "width": 300,
+   "steps": [
+    [
+     0,
+     "FROZEN"
+    ]
+   ]
+  },
+  {
+   "label": "RISK",
+   "type": "pct",
+   "width": 220,
+   "steps": [
+    [
+     0,
+     75
+    ],
+    [
+     17.2,
+     85
+    ],
+    [
+     25.0,
+     92
+    ],
+    [
+     32.0,
+     70
+    ],
+    [
+     46.4,
+     90
+    ],
+    [
+     58.5,
+     97
+    ],
+    [
+     62.2,
+     99
+    ]
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "t": 0.0,
+   "panel": 1,
+   "from": [
+    0.3,
+    0.42
+   ],
+   "to": [
+    0.62,
+    0.45
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "t": 2.46,
+   "card": "title"
+  },
+  {
+   "t": 6.4,
+   "panel": 1,
+   "from": [
+    0.5,
+    0.55
+   ],
+   "to": [
+    0.5,
+    0.52
+   ],
+   "zoom": [
+    1.4,
+    1.28
+   ]
+  },
+  {
+   "t": 9.22,
+   "panel": 2,
+   "from": [
+    0.35,
+    0.45
+   ],
+   "to": [
+    0.65,
+    0.4
+   ],
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "t": 11.81,
+   "panel": 2,
+   "from": [
+    0.45,
+    0.66
+   ],
+   "to": [
+    0.45,
+    0.64
+   ],
+   "zoom": [
+    1.35,
+    1.48
+   ]
+  },
+  {
+   "t": 12.6,
+   "card": "deal"
+  },
+  {
+   "t": 17.79,
+   "card": "catch1"
+  },
+  {
+   "t": 23.32,
+   "panel": 3,
+   "from": [
+    0.3,
+    0.45
+   ],
+   "to": [
+    0.7,
+    0.45
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "t": 25.96,
+   "panel": 3,
+   "from": [
+    0.75,
+    0.45
+   ],
+   "to": [
+    0.75,
+    0.48
+   ],
+   "zoom": [
+    1.3,
+    1.42
+   ]
+  },
+  {
+   "t": 29.44,
+   "card": "giftcards"
+  },
+  {
+   "t": 33.94,
+   "panel": 4,
+   "from": [
+    0.35,
+    0.5
+   ],
+   "to": [
+    0.6,
+    0.5
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "t": 36.6,
+   "panel": 5,
+   "from": [
+    0.35,
+    0.5
+   ],
+   "to": [
+    0.62,
+    0.5
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "t": 39.26,
+   "card": "address"
+  },
+  {
+   "t": 43.72,
+   "panel": 6,
+   "from": [
+    0.5,
+    0.5
+   ],
+   "zoom": [
+    0.6,
+    0.66
+   ]
+  },
+  {
+   "t": 47.25,
+   "card": "blockchain"
+  },
+  {
+   "t": 50.95,
+   "panel": 7,
+   "from": [
+    0.35,
+    0.5
+   ],
+   "to": [
+    0.55,
+    0.5
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "t": 52.71,
+   "panel": 7,
+   "from": [
+    0.45,
+    0.49
+   ],
+   "zoom": [
+    1.3,
+    1.4
+   ]
+  },
+  {
+   "t": 54.66,
+   "card": "onchain"
+  },
+  {
+   "t": 59.49,
+   "panel": 8,
+   "from": [
+    0.4,
+    0.5
+   ],
+   "to": [
+    0.62,
+    0.55
+   ],
+   "zoom": [
+    1.0,
+    1.07
+   ]
+  },
+  {
+   "t": 62.69,
+   "card": "stand"
+  },
+  {
+   "t": 68.45,
+   "panel": 9,
+   "from": [
+    0.5,
+    0.5
+   ],
+   "zoom": [
+    0.6,
+    0.67
+   ]
+  },
+  {
+   "t": 73.33,
+   "card": "end"
+  }
+ ],
+ "cards": {
+  "title": {
+   "bg": "dark",
+   "els": [
+    {
+     "t": 2.46,
+     "type": "label",
+     "text": "₹5 crore bitcoin · part 2",
+     "y": 520
+    },
+    {
+     "t": 2.46,
+     "type": "text",
+     "text": "PART 2",
+     "size": 170,
+     "color": "white",
+     "weight": 900,
+     "y": 690
+    },
+    {
+     "t": 2.7,
+     "type": "text",
+     "text": "CASH DEAL",
+     "size": 150,
+     "color": "pink",
+     "weight": 900,
+     "y": 850
+    },
+    {
+     "t": 3.31,
+     "type": "stamp",
+     "text": "BANK FROZEN",
+     "y": 1010
+    },
+    {
+     "t": 4.4,
+     "type": "small",
+     "text": "ab bina bank ke khelte hain",
+     "y": 1130
+    }
+   ]
+  },
+  "deal": {
+   "bg": "cream",
+   "els": [
+    {
+     "t": 12.6,
+     "type": "label",
+     "text": "Plan 1 · Telegram dealer",
+     "y": 520
+    },
+    {
+     "t": 12.6,
+     "type": "text",
+     "text": "Tum: Crypto bhejo",
+     "size": 72,
+     "color": "ink",
+     "y": 650
+    },
+    {
+     "t": 13.6,
+     "type": "arrow",
+     "y": 730
+    },
+    {
+     "t": 14.79,
+     "type": "text",
+     "text": "Dealer: Cash dega",
+     "size": 72,
+     "color": "pink",
+     "y": 810
+    },
+    {
+     "t": 15.3,
+     "type": "text",
+     "text": "− 10% commission",
+     "size": 60,
+     "color": "mid",
+     "y": 920
+    },
+    {
+     "t": 16.84,
+     "type": "pill",
+     "text": "CASH IN HAND",
+     "bg": "ink",
+     "fg": "white",
+     "y": 1050
+    }
+   ]
+  },
+  "catch1": {
+   "bg": "dark",
+   "els": [
+    {
+     "t": 17.79,
+     "type": "label",
+     "text": "The catch",
+     "y": 520
+    },
+    {
+     "t": 17.79,
+     "type": "text",
+     "text": "Ek baar button dabaya…",
+     "size": 64,
+     "color": "soft",
+     "y": 660
+    },
+    {
+     "t": 19.92,
+     "type": "pill",
+     "text": "SEND  ₹4.96 Cr",
+     "bg": "pink",
+     "fg": "white",
+     "size": 56,
+     "y": 800
+    },
+    {
+     "t": 21.75,
+     "type": "text",
+     "text": "Reverse nahi hoga",
+     "size": 96,
+     "color": "white",
+     "weight": 900,
+     "y": 960
+    },
+    {
+     "t": 22.4,
+     "type": "stamp",
+     "text": "NO REFUND",
+     "y": 1100
+    }
+   ]
+  },
+  "giftcards": {
+   "bg": "cream",
+   "els": [
+    {
+     "t": 29.44,
+     "type": "label",
+     "text": "Plan 2 · Gift cards",
+     "y": 520
+    },
+    {
+     "t": 29.44,
+     "type": "text",
+     "text": "Crypto",
+     "size": 110,
+     "color": "ink",
+     "weight": 900,
+     "y": 660
+    },
+    {
+     "t": 30.2,
+     "type": "arrow",
+     "y": 760
+    },
+    {
+     "t": 30.76,
+     "type": "text",
+     "text": "Gift Cards",
+     "size": 120,
+     "color": "pink",
+     "weight": 900,
+     "y": 860
+    },
+    {
+     "t": 32.63,
+     "type": "stamp",
+     "text": "NO KYC",
+     "angle": -5,
+     "y": 1010
+    }
+   ]
+  },
+  "address": {
+   "bg": "dark",
+   "els": [
+    {
+     "t": 39.26,
+     "type": "label",
+     "text": "The catch",
+     "y": 520
+    },
+    {
+     "t": 39.26,
+     "type": "text",
+     "text": "Gift card",
+     "size": 90,
+     "color": "white",
+     "weight": 900,
+     "y": 640
+    },
+    {
+     "t": 39.96,
+     "type": "small",
+     "text": "anonymous",
+     "y": 730
+    },
+    {
+     "t": 41.28,
+     "type": "text",
+     "text": "Delivery address?",
+     "size": 80,
+     "color": "soft",
+     "y": 850
+    },
+    {
+     "t": 42.53,
+     "type": "text",
+     "text": "TUMHARA GHAR",
+     "size": 104,
+     "color": "pink",
+     "weight": 900,
+     "y": 990
+    }
+   ]
+  },
+  "blockchain": {
+   "bg": "dark",
+   "els": [
+    {
+     "t": 47.25,
+     "type": "label",
+     "text": "Sabse badi galti",
+     "y": 520
+    },
+    {
+     "t": 47.25,
+     "type": "text",
+     "text": "Sabse badi galti",
+     "size": 80,
+     "color": "soft",
+     "y": 650
+    },
+    {
+     "t": 48.95,
+     "type": "text",
+     "text": "BLOCKCHAIN",
+     "size": 124,
+     "color": "pink",
+     "weight": 900,
+     "y": 800
+    },
+    {
+     "t": 49.52,
+     "type": "text",
+     "text": "= PUBLIC",
+     "size": 130,
+     "color": "white",
+     "weight": 900,
+     "y": 950
+    },
+    {
+     "t": 50.2,
+     "type": "small",
+     "text": "har transaction sabko dikhta hai",
+     "y": 1070
+    }
+   ]
+  },
+  "onchain": {
+   "bg": "cream",
+   "els": [
+    {
+     "t": 54.66,
+     "type": "label",
+     "text": "On-chain alert",
+     "y": 520
+    },
+    {
+     "t": 55.74,
+     "type": "text",
+     "text": "3 saal se band wallet",
+     "size": 72,
+     "color": "ink",
+     "y": 650
+    },
+    {
+     "t": 56.6,
+     "type": "arrow",
+     "y": 730
+    },
+    {
+     "t": 57.7,
+     "type": "text",
+     "text": "Achanak halchal",
+     "size": 100,
+     "color": "pink",
+     "weight": 900,
+     "y": 820
+    },
+    {
+     "t": 58.3,
+     "type": "stamp",
+     "text": "SPOTTED",
+     "y": 960
+    }
+   ]
+  },
+  "stand": {
+   "bg": "cream",
+   "els": [
+    {
+     "t": 62.69,
+     "type": "label",
+     "text": "Day 3 · where you stand",
+     "y": 500
+    },
+    {
+     "t": 62.69,
+     "type": "row",
+     "label": "Bitcoin abhi bhi laptop mein",
+     "value": "₹4,94,00,000",
+     "color": "ink",
+     "y": 640
+    },
+    {
+     "t": 66.19,
+     "type": "row",
+     "label": "Peeche kaun?",
+     "value": "Police + Mafia",
+     "color": "pink",
+     "y": 840
+    },
+    {
+     "t": 67.0,
+     "type": "row",
+     "label": "Risk",
+     "value": "99%",
+     "color": "pink",
+     "bar": 0.99,
+     "y": 1040
+    }
+   ]
+  },
+  "end": {
+   "bg": "dark",
+   "els": [
+    {
+     "t": 73.33,
+     "type": "label",
+     "text": "₹5 crore bitcoin · part 2",
+     "y": 520
+    },
+    {
+     "t": 73.33,
+     "type": "text",
+     "text": "PART 3",
+     "size": 170,
+     "color": "white",
+     "weight": 900,
+     "y": 690
+    },
+    {
+     "t": 73.5,
+     "type": "text",
+     "text": "Comment karo",
+     "size": 54,
+     "color": "pink",
+     "y": 850
+    },
+    {
+     "t": 73.7,
+     "type": "choice",
+     "options": [
+      "CRYPTO MIXER",
+      "DESH CHHOD DO"
+     ],
+     "size": 42,
+     "y": 970
+    },
+    {
+     "t": 74.13,
+     "type": "text",
+     "text": "Part 3 mein dekhte hain.",
+     "size": 32,
+     "color": "dim",
+     "weight": 700,
+     "y": 1080
+    }
+   ]
+  }
+ },
+ "sfx": {
+  "volume": 0.18,
+  "cut": "thud",
+  "cut_gain": 0.5,
+  "card_pop": 0.35,
+  "caption_tick": 0.35,
+  "intro_boom": 0.5,
+  "accents": [
+   {
+    "t": 23.86,
+    "sound": "boom"
+   },
+   {
+    "t": 59.49,
+    "sound": "boom"
+   },
+   {
+    "t": 35.38,
+    "sound": "chime"
+   },
+   {
+    "t": 43.72,
+    "sound": "alert"
+   },
+   {
+    "t": 57.7,
+    "sound": "alert"
+   }
+  ]
+ }
+}
