@@ -21,12 +21,31 @@ Look of every part (all of it is built into `scripts/render_reel.py`):
   (overall 18 %): soft thud on cuts, faint tick per caption, light pop per card line, a few accents
   (boom for danger, chime for money in, alert beep for "tracked/spotted")
 
+## The 30-part series bible
+`reference/series_30_parts.md` ("THE ₹5 CRORE HARD DRIVE — Every Click Leaves a Trace") is the
+user's complete plan: 6 arcs × 5 parts, and for every part the **HUD stats**, the **first-3-second
+hook** and the **complete audio script**. Use it:
+- "bitcoin part N" with no script attached → take Part N's "Complete Audio Script" as the script.
+  If a script *is* attached, the attached one wins (the recorded voiceover can differ from the bible —
+  e.g. the recorded Part 2 starts with "Aap logon ne bola— Cash Deal"); always align against what was voiced.
+- HUD: follow that part's "HUD Stats" line (start → end values). Boxes are short labels, e.g.
+  WALLET / BANK (or CASH / GOLD / LOCATION / STATUS as the part needs) / CYBER RADAR %.
+  Text values (FROZEN, SEIZED, DRAINED, DUBAI…) are allowed and show in pink.
+- Cards: pull the real rules and numbers the part explains (PMLA, FEMA limits, 30 % TDS, VARA, CRS…)
+  into the cards; end card = "PART N+1" + the two options the script asks people to comment.
+- If the user asks for **image prompts** for Part N: write one 3x3 grid prompt — "ONE single square image,
+  comic storyboard grid of 9 equal panels, 3x3, thin white gutters and black panel borders, bold
+  outlined Indian comic style, moody purple/blue/pink night lighting; recurring hero: a man with a plain
+  white round ball head, simple dot eyes, blue checked shirt, jeans; no captions or speech bubbles except
+  short on-screen UI text" + 9 panel lines following the script's beats in order.
+
 ## Inputs (ask only for what is missing)
 1. **Grid image**: a 3x3 comic grid (any size; white or dark gutters). Panels are the story in order.
 2. **Voiceover**: ElevenLabs MP3 (voice "Prayan – Mystery/Crime Documentary").
 3. **Script**: the exact voiceover text. Blank lines / paragraph breaks in it mark story beats.
+   If missing, use the part's script from the series bible (ask which part if it isn't clear).
 
-If the user only typed "bitcoin", reply in one line asking them to attach those three things.
+If the user only typed "bitcoin", reply in one line asking them for the part number + grid image + MP3.
 Uploaded files arrive as paths in the message; images can also land in a session `images/` folder.
 
 ## Workflow
@@ -82,7 +101,7 @@ Majority jo bolegi, wahi Part N+1 mein" → "⚠️ Ye ek kaalpanik kahani hai, 
 Hashtags: #bitcoin #crypto #cryptotax #incometax #cybercrime #cybercell #moneyfacts #finance
 #paisa #hindireels #reelsindia #storytime #partN #viralreels #explore (+ topic-specific ones).
 
-## Story so far
+## Story so far (videos already made; the rest follows the series bible)
 - Part 1: ₹500 laptop → ₹5 Cr Bitcoin → exchange needs Aadhaar/PAN + 1 % TDS → 30 % tax, 78 % penalty →
   P2P: 5 × ₹80,000 = ₹4 lakh → scammer's money → bank FROZEN by cyber cell. Options: Cash Deal / Dubai Plan.
 - Part 2 (Cash Deal): Telegram grey-market dealer (10 % commission, irreversible, gun) → anonymous gift
