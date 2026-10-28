@@ -1,0 +1,106 @@
+{
+  "sheet": "part3.sheet.png",
+  "audio": "part3.voiceover.mp3",
+  "words": "part3.words.json",
+  "duration": 68.2,
+  "hud": [{"label": "Wallet", "value": "₹4,94,00,000"},
+          {"label": "Lost", "value": "₹0"},
+          {"label": "Cyber radar", "value": "70%", "accent": true}],
+  "scenes": [
+    {"type": "panel", "start": 0, "end": 7.75, "panel": 1, "zoom": [1.0, 1.12], "focus": [0.5, 0.65]},
+
+    {"type": "card", "theme": "dark", "start": 7.75, "end": 9.15, "top": 0.27,
+     "kicker": "Every rupee leaves a trail",
+     "items": [{"kind": "title", "text": "PART 3\nMIXER", "at": 7.8}]},
+
+    {"type": "card", "start": 9.15, "end": 12.9, "kicker": "The plan",
+     "items": [{"kind": "head", "text": "Desh chhodo.", "at": 9.2},
+               {"kind": "small", "text": "Par usse pehle", "at": 9.9},
+               {"kind": "arrow", "at": 10.2},
+               {"kind": "line", "text": "Paise ka digital trail", "at": 10.7},
+               {"kind": "stamp", "text": "MITAO", "at": 11.4}]},
+
+    {"type": "card", "start": 12.9, "end": 15.66, "kicker": "Day 3 · Where you stand", "top": 0.2,
+     "items": [{"kind": "ledger", "label": "In the wallet", "value": "₹4,94,00,000", "at": 13.0},
+               {"kind": "ledger", "label": "Lost so far", "value": "₹0", "at": 13.3},
+               {"kind": "ledger", "label": "Cyber radar", "meter": true, "from": 70, "value": 70, "at": 13.6}]},
+
+    {"type": "panel", "start": 15.66, "end": 18.25, "panel": 2, "zoom": [1.12, 1.0]},
+
+    {"type": "card", "start": 18.25, "end": 24.3, "kicker": "Problem 1 · Crypto mixer",
+     "items": [{"kind": "line", "text": "Tumhara Bitcoin", "at": 18.5},
+               {"kind": "arrow", "at": 19.2},
+               {"kind": "line", "text": "+ hazaaron unknown wallets", "color": "muted", "at": 19.4},
+               {"kind": "arrow", "at": 21.0},
+               {"kind": "head", "text": "MIX", "color": "pink", "size": 150, "at": 21.5},
+               {"kind": "stamp", "text": "TRACK: NAHI", "at": 23.1}]},
+
+    {"type": "panel", "start": 24.3, "end": 28.2, "panel": 3, "zoom": [1.0, 1.12], "focus": [0.4, 0.45],
+     "hud": [{"label": "Wallet", "value": "₹4,94,00,000"},
+             {"label": "In mixer", "value": "₹50,00,000"},
+             {"label": "Cyber radar", "value": "70%", "accent": true}]},
+
+    {"type": "card", "theme": "dark", "start": 28.2, "end": 30.58, "kicker": "Dark web", "top": 0.27,
+     "items": [{"kind": "title", "text": "KOI SAGA\nNAHI", "size": 160, "at": 29.1}]},
+
+    {"type": "card", "start": 30.58, "end": 33.55, "kicker": "Problem 2 · Phishing",
+     "items": [{"kind": "big", "count": [0, 90], "suffix": "%", "prefix": "", "color": "pink", "size": 170, "count_dur": 0.6, "at": 30.6},
+               {"kind": "line", "text": "mixers", "at": 31.28},
+               {"kind": "arrow", "at": 31.7},
+               {"kind": "line", "text": "fake phishing sites", "at": 31.9},
+               {"kind": "stamp", "text": "SCAM", "at": 32.75}]},
+
+    {"type": "panel", "start": 33.55, "end": 36.33, "panel": 4, "zoom": [1.0, 1.1], "focus": [0.5, 0.35],
+     "hud": [{"label": "Wallet", "value": "₹4,44,00,000"},
+             {"label": "Lost", "value": "₹25,00,000"},
+             {"label": "Cyber radar", "value": "70%", "accent": true}]},
+
+    {"type": "panel", "start": 36.33, "end": 40.68, "panel": 5, "zoom": [1.12, 1.0],
+     "hud": [{"label": "Wallet", "value": "₹4,44,00,000"},
+             {"label": "Lost", "value": "₹25,00,000"},
+             {"label": "Cyber radar", "value": "78%", "accent": true}]},
+
+    {"type": "card", "start": 40.68, "end": 45.54, "kicker": "Problem 3 · Exchange",
+     "items": [{"kind": "line", "text": "Bacha ₹25 lakh", "at": 40.7},
+               {"kind": "arrow", "at": 41.0},
+               {"kind": "line", "text": "Har legal exchange", "at": 41.26},
+               {"kind": "arrow", "at": 42.0},
+               {"kind": "line", "text": "Pata chal gaya", "color": "pink", "at": 42.1},
+               {"kind": "small", "text": "Mixer se dhokar aaya hai", "at": 43.3},
+               {"kind": "stamp", "text": "TAINTED", "at": 44.4}]},
+
+    {"type": "panel", "start": 45.54, "end": 47.44, "panel": 6, "zoom": [1.0, 1.1],
+     "hud": [{"label": "Wallet", "value": "₹4,44,00,000"},
+             {"label": "Lost", "value": "₹50,00,000"},
+             {"label": "Cyber radar", "value": "80%", "accent": true}]},
+
+    {"type": "panel", "start": 47.44, "end": 51.96, "panel": 7, "zoom": [1.1, 1.0], "focus": [0.5, 0.6],
+     "hud": [{"label": "Wallet", "value": "₹4,44,00,000"},
+             {"label": "Lost", "value": "₹50,00,000"},
+             {"label": "Cyber radar", "value": "80%", "accent": true}]},
+
+    {"type": "panel", "start": 51.96, "end": 54.22, "panel": 8, "zoom": [1.0, 1.12], "focus": [0.6, 0.4],
+     "hud": [{"label": "Wallet", "value": "₹4,44,00,000"},
+             {"label": "Lost", "value": "₹50,00,000"},
+             {"label": "Cyber radar", "value": "80%", "accent": true}]},
+
+    {"type": "card", "start": 54.22, "end": 59.52, "kicker": "Day 3 · Where you stand", "top": 0.2,
+     "items": [{"kind": "ledger", "label": "In the wallet", "value": "₹4,94,00,000", "new_value": "₹4,44,00,000", "change_at": 55.5, "at": 54.3},
+               {"kind": "ledger", "label": "Lost to the mixer", "value": "₹50,00,000", "color": "pink", "at": 54.6},
+               {"kind": "ledger", "label": "Cyber radar", "meter": true, "from": 80, "value": 85, "change_at": 57.94, "at": 57.2}]},
+
+    {"type": "card", "theme": "dark", "start": 59.52, "end": 61.8, "kicker": "Abhi ke abhi", "top": 0.27,
+     "items": [{"kind": "title", "text": "KAMRA\nCHHODO", "at": 60.36},
+               {"kind": "meter", "label": "Cyber radar", "from": 85, "value": 85, "at": 59.6, "y": 0.72}]},
+
+    {"type": "panel", "start": 61.8, "end": 65.95, "panel": 9, "zoom": [1.0, 1.08]},
+
+    {"type": "card", "theme": "dark", "start": 65.95, "end": 68.2, "top": 0.25,
+     "kicker": "Every rupee leaves a trail",
+     "items": [{"kind": "title", "text": "PART 4\nKAL", "at": 66.0},
+               {"kind": "line", "text": "Kahan bhaagoge?", "color": "paper", "at": 66.0},
+               {"kind": "small", "text": "Comment karo", "at": 66.0},
+               {"kind": "buttons", "at": 66.3, "buttons": [{"text": "HAWALA"}, {"sep": "ya"}, {"text": "STATION", "pink": true}]},
+               {"kind": "small", "text": "Part 4 mein dekhte hain.", "at": 66.9}]}
+  ]
+}
