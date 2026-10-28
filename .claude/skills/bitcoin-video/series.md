@@ -1,6 +1,7 @@
 # Series continuity — Bitcoin story
 
 Carry these numbers into the next part's HUD and ledger cards. Update after every part.
+Full voiceover scripts of every part are in `scripts/` (e.g. `scripts/part3.md`).
 
 | Part | Episode word | HUD at the end | Cliffhanger / end card |
 |------|--------------|----------------|------------------------|

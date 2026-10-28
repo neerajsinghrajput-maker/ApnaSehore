@@ -75,7 +75,14 @@ Copy is Roman Hinglish, short and punchy, numbers in Indian format (`₹1,96,96,
    `python render.py spec.json preview.png --preview 2,6.5,12,20,…` (one frame per scene).
 6. **Render**: `python render.py spec.json Bitcoin_PartN.mp4` (≈2–4 min for 60–70 s).
    Spot-check a few frames, then send the mp4 to the user.
-7. Update `series.md` with the new part's ending numbers and episode word.
+7. **Remember the story** (the container is wiped after each session, so this is the only memory):
+   - Save the part's full voiceover script to `scripts/partN.md` (Roman Hinglish + the original
+     transcript), and its `words.json` + `spec.json` to `examples/`.
+   - Update `series.md` with the ending numbers, episode word and cliffhanger.
+   - Commit and push these files.
+
+**Before starting any new part, read `series.md` and every file in `scripts/`** so the story,
+names, amounts and HUD values continue from where the previous part ended.
 
 Run with any Python 3 that has Pillow + numpy (`pip install pillow numpy`); ffmpeg must be on PATH.
 Fonts: Inter / Inter Display and JetBrains Mono (system paths, or drop the files into `fonts/`).
