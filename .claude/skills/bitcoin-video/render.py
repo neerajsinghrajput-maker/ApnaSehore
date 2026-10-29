@@ -101,13 +101,15 @@ def line_height(f):
 
 # ---------------------------------------------------------------- comic panels
 def split_panels(path, rows=None, cols=None):
-    """Find panels on a comic sheet by scanning for light gutters. Returns PIL crops in reading order."""
+    """Find panels on a comic sheet by scanning for light (or dark) gutters. Returns PIL crops in reading order."""
     im = Image.open(path).convert("RGB")
     g = np.asarray(im.convert("L")).astype(float)
-    light = g > 235
+    light, cut = g > 235, 0.6
+    if light.mean(1).max() < 0.9:                  # no light gutters: the sheet uses dark ones
+        light, cut = g < 45, 0.9
 
     def runs(profile, n):
-        idx = np.where(profile < 0.6)[0]           # content lines
+        idx = np.where(profile < cut)[0]           # content lines
         segs, start = [], idx[0]
         for a, b in zip(idx[:-1], idx[1:]):
             if b != a + 1:

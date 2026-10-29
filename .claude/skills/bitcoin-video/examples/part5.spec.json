@@ -1,0 +1,547 @@
+{
+ "sheet": "part5.sheet.png",
+ "audio": "part5.voiceover.mp3",
+ "words": "part5.words.json",
+ "duration": 79.96,
+ "hud": [
+  {
+   "label": "Wallet",
+   "value": "₹3,94,00,000"
+  },
+  {
+   "label": "Company bank",
+   "value": "₹0"
+  },
+  {
+   "label": "Cyber radar",
+   "value": "90%",
+   "accent": true
+  }
+ ],
+ "scenes": [
+  {
+   "type": "panel",
+   "start": 0,
+   "end": 5.85,
+   "panel": 1,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.6,
+    0.4
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 5.85,
+   "end": 9.3,
+   "top": 0.27,
+   "kicker": "Every rupee leaves a trail",
+   "items": [
+    {
+     "kind": "title",
+     "text": "PART 5\nCORRUPT CA",
+     "size": 170,
+     "at": 5.9
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 9.3,
+   "end": 12.85,
+   "top": 0.27,
+   "kicker": "CA ka masterplan",
+   "items": [
+    {
+     "kind": "small",
+     "text": "Ek hi jawaab",
+     "at": 9.5
+    },
+    {
+     "kind": "gap",
+     "h": 30
+    },
+    {
+     "kind": "title",
+     "text": "SHELL\nCOMPANY",
+     "size": 170,
+     "at": 11.75
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 12.85,
+   "end": 16.8,
+   "kicker": "Problem 1 · Shell company",
+   "items": [
+    {
+     "kind": "head",
+     "text": "Fake IT company",
+     "size": 100,
+     "at": 13.1
+    },
+    {
+     "kind": "arrow",
+     "at": 14.4
+    },
+    {
+     "kind": "line",
+     "text": "Na office, na staff",
+     "at": 14.5
+    },
+    {
+     "kind": "line",
+     "text": "Sirf kaagazon pe",
+     "color": "pink",
+     "at": 15.0
+    },
+    {
+     "kind": "stamp",
+     "text": "PAPER ONLY",
+     "at": 15.7
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 16.8,
+   "end": 19.65,
+   "panel": 3,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.7
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 19.65,
+   "end": 22.9,
+   "panel": 2,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "focus": [
+    0.6,
+    0.4
+   ]
+  },
+  {
+   "type": "card",
+   "start": 22.9,
+   "end": 26.6,
+   "kicker": "The plan · Round trip",
+   "items": [
+    {
+     "kind": "line",
+     "text": "Tumhara crypto",
+     "at": 22.95
+    },
+    {
+     "kind": "arrow",
+     "at": 23.2
+    },
+    {
+     "kind": "head",
+     "text": "Dubai",
+     "at": 23.2
+    },
+    {
+     "kind": "arrow",
+     "at": 23.8
+    },
+    {
+     "kind": "line",
+     "text": "\"Software consulting\" bill",
+     "color": "pink",
+     "at": 24.0
+    },
+    {
+     "kind": "arrow",
+     "at": 25.3
+    },
+    {
+     "kind": "line",
+     "text": "Tumhari hi company",
+     "at": 25.3
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 26.6,
+   "end": 31.9,
+   "kicker": "Sarkar ki nazar se",
+   "items": [
+    {
+     "kind": "small",
+     "text": "India mein",
+     "at": 27.6
+    },
+    {
+     "kind": "head",
+     "text": "Dollar aaya!",
+     "at": 28.1
+    },
+    {
+     "kind": "arrow",
+     "at": 29.4
+    },
+    {
+     "kind": "line",
+     "text": "Software export",
+     "at": 29.6
+    },
+    {
+     "kind": "line",
+     "text": "Tax bhi kam",
+     "color": "pink",
+     "at": 30.6
+    },
+    {
+     "kind": "stamp",
+     "text": "LEGAL DIKHEGA",
+     "at": 31.0
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 31.9,
+   "end": 35.6,
+   "panel": 4,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.35,
+    0.4
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Company bank",
+     "value": "₹1,00,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "90%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 35.6,
+   "end": 39.9,
+   "panel": 5,
+   "zoom": [
+    1.12,
+    1.0
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Company bank",
+     "value": "₹1,00,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "90%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 39.9,
+   "end": 41.05,
+   "top": 0.36,
+   "items": [
+    {
+     "kind": "title",
+     "text": "PAR...",
+     "size": 200,
+     "at": 40.0
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 41.05,
+   "end": 46.8,
+   "panel": 6,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Company bank",
+     "value": "₹1,00,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "92%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 46.8,
+   "end": 55.3,
+   "kicker": "Problem 2 · Tax AI",
+   "top": 0.19,
+   "items": [
+    {
+     "kind": "small",
+     "text": "Company ka turnover",
+     "at": 47.2
+    },
+    {
+     "kind": "big",
+     "count": [
+      0,
+      10000000
+     ],
+     "prefix": "₹",
+     "count_dur": 0.8,
+     "size": 130,
+     "at": 47.8
+    },
+    {
+     "kind": "arrow",
+     "at": 49.4
+    },
+    {
+     "kind": "rows",
+     "at": 50.1,
+     "rows": [
+      {
+       "text": "Office rent: ₹0",
+       "at": 50.1
+      },
+      {
+       "text": "Bijli ka bill: ₹0",
+       "at": 51.6
+      },
+      {
+       "text": "Employees ka PF: ₹0",
+       "at": 53.3
+      }
+     ]
+    },
+    {
+     "kind": "stamp",
+     "text": "FLAGGED",
+     "at": 54.4
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 55.3,
+   "end": 59.85,
+   "panel": 7,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Company bank",
+     "value": "₹1,00,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "92%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 59.85,
+   "end": 62.15,
+   "panel": 8,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "hud": []
+  },
+  {
+   "type": "card",
+   "start": 62.15,
+   "end": 66.0,
+   "kicker": "Day 5 · Where you stand",
+   "top": 0.2,
+   "items": [
+    {
+     "kind": "ledger",
+     "label": "In the wallet",
+     "value": "₹2,94,00,000",
+     "at": 62.2
+    },
+    {
+     "kind": "ledger",
+     "label": "Company account",
+     "value": "₹1,00,00,000",
+     "new_value": "SEIZED",
+     "change_at": 65.3,
+     "color": "pink",
+     "at": 62.5
+    },
+    {
+     "kind": "ledger",
+     "label": "Cyber radar",
+     "meter": true,
+     "from": 92,
+     "value": 95,
+     "change_at": 62.4,
+     "at": 62.3
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 66.0,
+   "end": 72.45,
+   "top": 0.27,
+   "kicker": "Bhaagte waqt",
+   "items": [
+    {
+     "kind": "line",
+     "text": "Laptop mein",
+     "color": "paper",
+     "at": 67.7
+    },
+    {
+     "kind": "small",
+     "text": "ek hidden folder",
+     "at": 68.4
+    },
+    {
+     "kind": "gap",
+     "h": 40
+    },
+    {
+     "kind": "title",
+     "text": "PROJECT\nBLACK",
+     "size": 170,
+     "at": 71.1
+    },
+    {
+     "kind": "meter",
+     "label": "Cyber radar",
+     "from": 95,
+     "value": 95,
+     "at": 66.1,
+     "y": 0.74
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 72.45,
+   "end": 76.9,
+   "panel": 9,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "hud": []
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 76.9,
+   "end": 79.96,
+   "top": 0.25,
+   "kicker": "Every rupee leaves a trail",
+   "items": [
+    {
+     "kind": "title",
+     "text": "PART 6\nKAL",
+     "at": 76.95
+    },
+    {
+     "kind": "line",
+     "text": "Ab kya karein?",
+     "color": "paper",
+     "at": 76.95
+    },
+    {
+     "kind": "small",
+     "text": "Comment karo",
+     "at": 77.1
+    },
+    {
+     "kind": "buttons",
+     "at": 77.3,
+     "buttons": [
+      {
+       "text": "CASINO"
+      },
+      {
+       "sep": "ya"
+      },
+      {
+       "text": "FOLDER",
+       "pink": true
+      }
+     ]
+    },
+    {
+     "kind": "small",
+     "text": "Part 6 mein bada dhamaka hoga.",
+     "at": 78.0
+    }
+   ]
+  }
+ ]
+}

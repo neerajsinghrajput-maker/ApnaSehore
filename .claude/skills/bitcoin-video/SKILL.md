@@ -58,13 +58,16 @@ Copy is Roman Hinglish, short and punchy, numbers in Indian format (`₹1,96,96,
 ## Workflow
 
 1. **Inspect inputs**: `ffprobe` the mp3 for duration; view the comic sheet. `render.py` splits the
-   sheet into panels automatically by its light gutters (reading order, 1-based).
+   sheet into panels automatically by its light (or dark) gutters (reading order, 1-based).
 2. **Get word timings** → `words.json` (list of `{"text","start","end"}` in seconds, Roman Hinglish):
    - Preferred: ElevenLabs `creative_transcribe_audio` (create flow → asset upload → PUT bytes →
      finalize → transcribe → poll `creative_get_flow_run_status`, read `words`). If it returns
      Devanagari, rewrite each word's `text` in Roman Hinglish but keep its timing.
    - Fallback: ask the user for the voiceover script, save it as `script.txt`, then
      `python align.py voiceover.mp3 script.txt words.json` (estimates timings from pauses).
+     Better fallback: split the script into `phrases.txt`, one line per pause in the voiceover, and run
+     `python align_pinned.py voiceover.mp3 phrases.txt words.json` — every phrase is pinned to its own
+     speech segment, so timing can't drift (the script errors if the line and segment counts differ).
 3. **Write the story beats**: read the transcript, mark where each sentence starts, and decide per
    beat: panel (which one) vs cream card vs dark card. Every panel should be used at least once;
    cards carry the numbers and rules. Keep HUD values continuous with the previous part — see
