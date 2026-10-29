@@ -1,5 +1,9 @@
-; the user confirmed the
-recorded script below, which matched the voiceover's pauses segment for segment).
+# Part 5 — CORRUPT CA (voiceover script)
+
+Source: ElevenLabs voiceover "Prayan – For Mystery / Crime Documentary", 79.96 s.
+Word timings: `../examples/part5.words.json`, pinned to the voiceover's pauses with
+`align_pinned.py` (no speech-to-text was reachable). The text is the recorded script the
+user confirmed; its phrases matched the voiceover's pauses segment for segment.
 
 ## Roman Hinglish (used for subtitles; one line per speech segment)
 
