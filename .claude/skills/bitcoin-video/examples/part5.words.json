@@ -27,81 +27,86 @@
 {
 "text": "kanoon",
 "start": 2.033,
-"end": 2.391
+"end": 2.387
 },
 {
 "text": "ke",
-"start": 2.391,
-"end": 2.57
+"start": 2.387,
+"end": 2.564
 },
 {
 "text": "andar",
-"start": 2.57,
-"end": 2.884
+"start": 2.564,
+"end": 2.873
 },
 {
 "text": "ek",
-"start": 2.884,
-"end": 3.064
+"start": 2.873,
+"end": 3.05
 },
 {
 "text": "fake",
-"start": 3.064,
-"end": 3.333
+"start": 3.05,
+"end": 3.316
 },
 {
 "text": "company",
-"start": 3.333,
-"end": 3.736
+"start": 3.316,
+"end": 3.714
 },
 {
-"text": "kholkar",
-"start": 3.736,
-"end": 4.14
-},
-{
-"text": "ek",
-"start": 4.14,
-"end": 4.319
-},
-{
-"text": "crore",
-"start": 4.319,
-"end": 4.633
-},
-{
-"text": "white",
-"start": 4.633,
-"end": 4.947
+"text": "khol",
+"start": 3.714,
+"end": 3.98
 },
 {
 "text": "kar",
-"start": 4.947,
-"end": 5.171
+"start": 3.98,
+"end": 4.201
+},
+{
+"text": "1",
+"start": 4.201,
+"end": 4.334
+},
+{
+"text": "Crore",
+"start": 4.334,
+"end": 4.644
+},
+{
+"text": "white",
+"start": 4.644,
+"end": 4.953
+},
+{
+"text": "kar",
+"start": 4.953,
+"end": 5.175
 },
 {
 "text": "lo!",
-"start": 5.171,
+"start": 5.175,
 "end": 5.484
 },
 {
 "text": "Aap",
 "start": 6.11,
-"end": 6.306
+"end": 6.298
 },
 {
 "text": "logon",
-"start": 6.306,
-"end": 6.581
+"start": 6.298,
+"end": 6.562
 },
 {
 "text": "ne",
-"start": 6.581,
-"end": 6.738
+"start": 6.562,
+"end": 6.712
 },
 {
-"text": "chuna",
-"start": 6.738,
+"text": "chuna—",
+"start": 6.712,
 "end": 7.013
 },
 {
@@ -117,91 +122,91 @@
 {
 "text": "CA",
 "start": 9.462,
-"end": 9.674
+"end": 9.687
 },
 {
 "text": "ne",
-"start": 9.674,
-"end": 9.886
+"start": 9.687,
+"end": 9.911
 },
 {
 "text": "banaya",
-"start": 9.886,
-"end": 10.309
+"start": 9.911,
+"end": 10.36
 },
 {
 "text": "ek",
-"start": 10.309,
-"end": 10.52
+"start": 10.36,
+"end": 10.584
 },
 {
-"text": "masterplan,",
-"start": 10.52,
+"text": "Masterplan—",
+"start": 10.584,
 "end": 11.314
 },
 {
-"text": "Shell",
+"text": "'Shell",
 "start": 11.75,
-"end": 12.049
+"end": 12.059
 },
 {
-"text": "Company.",
-"start": 12.049,
+"text": "Company'.",
+"start": 12.059,
 "end": 12.56
 },
 {
 "text": "Ek",
 "start": 13.055,
-"end": 13.255
+"end": 13.258
 },
 {
 "text": "aisi",
-"start": 13.255,
-"end": 13.555
+"start": 13.258,
+"end": 13.562
 },
 {
 "text": "fake",
-"start": 13.555,
-"end": 13.855
+"start": 13.562,
+"end": 13.866
 },
 {
 "text": "IT",
-"start": 13.855,
-"end": 14.055
+"start": 13.866,
+"end": 14.069
 },
 {
 "text": "company",
-"start": 14.055,
-"end": 14.504
+"start": 14.069,
+"end": 14.526
 },
 {
 "text": "jo",
-"start": 14.504,
-"end": 14.704
+"start": 14.526,
+"end": 14.729
 },
 {
 "text": "sirf",
-"start": 14.704,
-"end": 15.004
+"start": 14.729,
+"end": 15.033
 },
 {
-"text": "kaagazon",
-"start": 15.004,
-"end": 15.504
+"text": "kagazon",
+"start": 15.033,
+"end": 15.489
 },
 {
 "text": "pe",
-"start": 15.504,
-"end": 15.704
+"start": 15.489,
+"end": 15.692
 },
 {
 "text": "chalti",
-"start": 15.704,
-"end": 16.104
+"start": 15.692,
+"end": 16.098
 },
 {
 "text": "hai.",
-"start": 16.104,
+"start": 16.098,
 "end": 16.503
 },
 {
@@ -247,106 +252,106 @@
 {
 "text": "Plan",
 "start": 19.878,
-"end": 20.168
+"end": 20.164
 },
 {
 "text": "ye",
-"start": 20.168,
-"end": 20.362
+"start": 20.164,
+"end": 20.355
 },
 {
 "text": "tha",
-"start": 20.362,
-"end": 20.604
+"start": 20.355,
+"end": 20.593
 },
 {
 "text": "ki",
-"start": 20.604,
-"end": 20.797
+"start": 20.593,
+"end": 20.784
 },
 {
 "text": "tum",
-"start": 20.797,
-"end": 21.039
+"start": 20.784,
+"end": 21.022
 },
 {
 "text": "apne",
-"start": 21.039,
-"end": 21.33
+"start": 21.022,
+"end": 21.308
 },
 {
-"text": "crypto",
-"start": 21.33,
-"end": 21.717
+"text": "Crypto",
+"start": 21.308,
+"end": 21.69
 },
 {
 "text": "se",
-"start": 21.717,
-"end": 21.911
+"start": 21.69,
+"end": 21.881
 },
 {
 "text": "khud",
-"start": 21.911,
-"end": 22.201
+"start": 21.881,
+"end": 22.167
 },
 {
 "text": "ki",
-"start": 22.201,
-"end": 22.395
+"start": 22.167,
+"end": 22.357
 },
 {
 "text": "hi",
-"start": 22.395,
-"end": 22.588
+"start": 22.357,
+"end": 22.548
 },
 {
 "text": "company",
-"start": 22.588,
-"end": 23.024
+"start": 22.548,
+"end": 22.977
 },
 {
 "text": "ko",
-"start": 23.024,
-"end": 23.218
+"start": 22.977,
+"end": 23.168
 },
 {
 "text": "Dubai",
-"start": 23.218,
-"end": 23.557
+"start": 23.168,
+"end": 23.502
 },
 {
 "text": "se",
-"start": 23.557,
-"end": 23.75
+"start": 23.502,
+"end": 23.693
 },
 {
-"text": "fake",
-"start": 23.75,
-"end": 24.041
+"text": "'Fake",
+"start": 23.693,
+"end": 24.027
 },
 {
-"text": "software",
-"start": 24.041,
-"end": 24.525
+"text": "Software",
+"start": 24.027,
+"end": 24.504
 },
 {
-"text": "consulting",
-"start": 24.525,
-"end": 25.106
+"text": "Consulting'",
+"start": 24.504,
+"end": 25.124
 },
 {
 "text": "ka",
-"start": 25.106,
-"end": 25.299
+"start": 25.124,
+"end": 25.314
 },
 {
 "text": "payment",
-"start": 25.299,
-"end": 25.735
+"start": 25.314,
+"end": 25.744
 },
 {
 "text": "bhejoge.",
-"start": 25.735,
+"start": 25.744,
 "end": 26.316
 },
 {
@@ -400,12 +405,12 @@
 "end": 29.592
 },
 {
-"text": "software",
+"text": "Software",
 "start": 29.592,
 "end": 29.97
 },
 {
-"text": "export",
+"text": "Export",
 "start": 29.97,
 "end": 30.272
 },
@@ -442,56 +447,56 @@
 {
 "text": "Tumne",
 "start": 32.224,
-"end": 32.494
+"end": 32.497
 },
 {
-"text": "ek",
-"start": 32.494,
-"end": 32.648
+"text": "1",
+"start": 32.497,
+"end": 32.615
 },
 {
-"text": "crore",
-"start": 32.648,
-"end": 32.918
+"text": "Crore",
+"start": 32.615,
+"end": 32.888
 },
 {
 "text": "rupaye",
-"start": 32.918,
-"end": 33.227
+"start": 32.888,
+"end": 33.201
 },
 {
 "text": "company",
-"start": 33.227,
-"end": 33.575
+"start": 33.201,
+"end": 33.553
 },
 {
 "text": "ke",
-"start": 33.575,
-"end": 33.729
+"start": 33.553,
+"end": 33.709
 },
 {
 "text": "current",
-"start": 33.729,
-"end": 34.077
+"start": 33.709,
+"end": 34.061
 },
 {
 "text": "account",
-"start": 34.077,
-"end": 34.424
+"start": 34.061,
+"end": 34.413
 },
 {
 "text": "mein",
-"start": 34.424,
-"end": 34.656
+"start": 34.413,
+"end": 34.647
 },
 {
 "text": "mangwa",
-"start": 34.656,
-"end": 34.965
+"start": 34.647,
+"end": 34.96
 },
 {
 "text": "liye.",
-"start": 34.965,
+"start": 34.96,
 "end": 35.312
 },
 {
@@ -520,17 +525,17 @@
 "end": 36.914
 },
 {
-"text": "corporate",
+"text": "Corporate",
 "start": 36.914,
 "end": 37.348
 },
 {
-"text": "credit",
+"text": "Credit",
 "start": 37.348,
 "end": 37.663
 },
 {
-"text": "card.",
+"text": "Card.",
 "start": 37.663,
 "end": 38.018
 },
@@ -622,161 +627,161 @@
 {
 "text": "System",
 "start": 45.597,
-"end": 45.98
+"end": 45.984
 },
 {
 "text": "ne",
-"start": 45.98,
-"end": 46.172
+"start": 45.984,
+"end": 46.177
 },
 {
 "text": "pakad",
-"start": 46.172,
-"end": 46.507
+"start": 46.177,
+"end": 46.515
 },
 {
 "text": "liya",
-"start": 46.507,
-"end": 46.794
+"start": 46.515,
+"end": 46.804
 },
 {
 "text": "ki",
-"start": 46.794,
-"end": 46.986
+"start": 46.804,
+"end": 46.997
 },
 {
 "text": "jis",
-"start": 46.986,
-"end": 47.225
+"start": 46.997,
+"end": 47.239
 },
 {
 "text": "company",
-"start": 47.225,
-"end": 47.656
+"start": 47.239,
+"end": 47.673
 },
 {
 "text": "ka",
-"start": 47.656,
-"end": 47.847
+"start": 47.673,
+"end": 47.866
 },
 {
-"text": "ek",
-"start": 47.847,
-"end": 48.038
+"text": "1",
+"start": 47.866,
+"end": 48.011
 },
 {
-"text": "crore",
-"start": 48.038,
-"end": 48.374
+"text": "Crore",
+"start": 48.011,
+"end": 48.349
 },
 {
 "text": "ka",
-"start": 48.374,
-"end": 48.565
+"start": 48.349,
+"end": 48.542
 },
 {
 "text": "turnover",
-"start": 48.565,
-"end": 49.044
+"start": 48.542,
+"end": 49.025
 },
 {
 "text": "hai,",
-"start": 49.044,
-"end": 49.426
+"start": 49.025,
+"end": 49.411
 },
 {
 "text": "uska",
-"start": 49.426,
-"end": 49.714
+"start": 49.411,
+"end": 49.701
 },
 {
 "text": "na",
-"start": 49.714,
-"end": 49.905
+"start": 49.701,
+"end": 49.894
 },
 {
 "text": "koi",
-"start": 49.905,
-"end": 50.144
+"start": 49.894,
+"end": 50.135
 },
 {
 "text": "office",
-"start": 50.144,
-"end": 50.527
+"start": 50.135,
+"end": 50.522
 },
 {
 "text": "rent",
-"start": 50.527,
-"end": 50.815
+"start": 50.522,
+"end": 50.811
 },
 {
 "text": "hai,",
-"start": 50.815,
+"start": 50.811,
 "end": 51.197
 },
 {
 "text": "na",
 "start": 51.5,
-"end": 51.681
+"end": 51.679
 },
 {
 "text": "bijli",
-"start": 51.681,
-"end": 51.998
+"start": 51.679,
+"end": 51.992
 },
 {
 "text": "ka",
-"start": 51.998,
-"end": 52.179
+"start": 51.992,
+"end": 52.17
 },
 {
 "text": "bill,",
-"start": 52.179,
-"end": 52.587
+"start": 52.17,
+"end": 52.572
 },
 {
 "text": "aur",
-"start": 52.587,
-"end": 52.813
+"start": 52.572,
+"end": 52.796
 },
 {
 "text": "na",
-"start": 52.813,
-"end": 52.994
+"start": 52.796,
+"end": 52.974
 },
 {
 "text": "ek",
-"start": 52.994,
-"end": 53.175
+"start": 52.974,
+"end": 53.153
 },
 {
 "text": "bhi",
-"start": 53.175,
-"end": 53.401
+"start": 53.153,
+"end": 53.376
 },
 {
 "text": "employee",
-"start": 53.401,
-"end": 53.854
+"start": 53.376,
+"end": 53.823
 },
 {
 "text": "ka",
-"start": 53.854,
-"end": 54.035
+"start": 53.823,
+"end": 54.002
 },
 {
 "text": "PF",
-"start": 54.035,
-"end": 54.216
+"start": 54.002,
+"end": 54.18
 },
 {
-"text": "katta",
-"start": 54.216,
-"end": 54.533
+"text": "kat-ta",
+"start": 54.18,
+"end": 54.538
 },
 {
 "text": "hai!",
-"start": 54.533,
+"start": 54.538,
 "end": 54.895
 },
 {
@@ -847,91 +852,91 @@
 {
 "text": "Agle",
 "start": 60.055,
-"end": 60.321
+"end": 60.336
 },
 {
 "text": "hi",
-"start": 60.321,
-"end": 60.499
+"start": 60.336,
+"end": 60.524
 },
 {
 "text": "pal",
-"start": 60.499,
-"end": 60.721
+"start": 60.524,
+"end": 60.758
 },
 {
 "text": "CA",
-"start": 60.721,
-"end": 60.899
+"start": 60.758,
+"end": 60.946
 },
 {
 "text": "ka",
-"start": 60.899,
-"end": 61.077
+"start": 60.946,
+"end": 61.134
 },
 {
 "text": "call",
-"start": 61.077,
-"end": 61.344
+"start": 61.134,
+"end": 61.415
 },
 {
-"text": "aaya.",
-"start": 61.344,
+"text": "aaya—",
+"start": 61.415,
 "end": 61.744
 },
 {
 "text": "Raid",
 "start": 62.277,
-"end": 62.553
+"end": 62.557
 },
 {
 "text": "pad",
-"start": 62.553,
-"end": 62.783
+"start": 62.557,
+"end": 62.79
 },
 {
 "text": "gayi",
-"start": 62.783,
-"end": 63.06
+"start": 62.79,
+"end": 63.07
 },
 {
 "text": "hai,",
-"start": 63.06,
-"end": 63.428
+"start": 63.07,
+"end": 63.444
 },
 {
 "text": "aur",
-"start": 63.428,
-"end": 63.658
+"start": 63.444,
+"end": 63.677
 },
 {
-"text": "ek",
-"start": 63.658,
-"end": 63.842
+"text": "1",
+"start": 63.677,
+"end": 63.817
 },
 {
-"text": "crore",
-"start": 63.842,
-"end": 64.165
+"text": "Crore",
+"start": 63.817,
+"end": 64.144
 },
 {
 "text": "ka",
-"start": 64.165,
-"end": 64.349
+"start": 64.144,
+"end": 64.33
 },
 {
 "text": "corporate",
-"start": 64.349,
-"end": 64.856
+"start": 64.33,
+"end": 64.844
 },
 {
 "text": "account",
-"start": 64.856,
-"end": 65.27
+"start": 64.844,
+"end": 65.264
 },
 {
 "text": "seize!",
-"start": 65.27,
+"start": 65.264,
 "end": 65.731
 },
 {
@@ -1010,13 +1015,13 @@
 "end": 70.713
 },
 {
-"text": "Project",
+"text": "'PROJECT",
 "start": 71.097,
-"end": 71.52
+"end": 71.522
 },
 {
-"text": "Black.",
-"start": 71.52,
+"text": "BLACK'.",
+"start": 71.522,
 "end": 71.99
 },
 {
@@ -1040,7 +1045,7 @@
 "end": 73.822
 },
 {
-"text": "casino",
+"text": "Casino",
 "start": 73.822,
 "end": 74.142
 },
@@ -1060,12 +1065,12 @@
 "end": 75.346
 },
 {
-"text": "secret",
+"text": "Secret",
 "start": 75.346,
 "end": 75.652
 },
 {
-"text": "folder",
+"text": "Folder",
 "start": 75.652,
 "end": 75.957
 },
@@ -1087,31 +1092,31 @@
 {
 "text": "Part",
 "start": 77.951,
-"end": 78.238
+"end": 78.26
 },
 {
-"text": "chhe",
-"start": 78.238,
-"end": 78.525
+"text": "6",
+"start": 78.26,
+"end": 78.415
 },
 {
 "text": "mein",
-"start": 78.525,
-"end": 78.812
+"start": 78.415,
+"end": 78.724
 },
 {
 "text": "bada",
-"start": 78.812,
-"end": 79.099
+"start": 78.724,
+"end": 79.033
 },
 {
 "text": "dhamaka",
-"start": 79.099,
-"end": 79.529
+"start": 79.033,
+"end": 79.496
 },
 {
 "text": "hoga!",
-"start": 79.529,
+"start": 79.496,
 "end": 79.96
 }
 ]
