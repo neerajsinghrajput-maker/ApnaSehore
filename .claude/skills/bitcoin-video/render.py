@@ -137,7 +137,7 @@ def cover(img, w, h):
 
 # ---------------------------------------------------------------- HUD
 def draw_hud(img, hud, a=1.0):
-    """hud: list of {label, value, accent?} — up to 3 boxes across the top."""
+    """hud: list of {label, value, accent?} — up to 4 boxes across the top."""
     n = len(hud)
     margin, gap, top, bh = 48, 22, 236, 104
     bw = (W - 2 * margin - gap * (n - 1)) / n
@@ -150,7 +150,10 @@ def draw_hud(img, hud, a=1.0):
     for i, box in enumerate(hud):
         x = margin + i * (bw + gap)
         draw_text(img, (x + 22, top + 16), box["label"].upper(), font(MONO, 17), (190, 182, 175), a, spacing=3)
-        draw_text(img, (x + 22, top + 42), str(box["value"]), font(BOLD, 40),
+        size = 40                                  # shrink long values to fit narrow (4-box) HUDs
+        while size > 24 and font(BOLD, size).getlength(str(box["value"])) > bw - 34:
+            size -= 2
+        draw_text(img, (x + 22, top + 42 + (40 - size) * 0.6), str(box["value"]), font(BOLD, size),
                   PINK if box.get("accent") else (255, 255, 255), a)
 
 

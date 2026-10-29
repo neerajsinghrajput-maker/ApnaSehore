@@ -9,6 +9,11 @@
    "value": "₹3,94,00,000"
   },
   {
+   "label": "Lost of 5 Cr",
+   "value": "₹1,06,00,000",
+   "accent": true
+  },
+  {
    "label": "Company bank",
    "value": "₹0"
   },
@@ -234,6 +239,11 @@
      "value": "₹2,94,00,000"
     },
     {
+     "label": "Lost of 5 Cr",
+     "value": "₹1,06,00,000",
+     "accent": true
+    },
+    {
      "label": "Company bank",
      "value": "₹1,00,00,000"
     },
@@ -261,6 +271,11 @@
     {
      "label": "Wallet",
      "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Lost of 5 Cr",
+     "value": "₹1,06,00,000",
+     "accent": true
     },
     {
      "label": "Company bank",
@@ -305,6 +320,11 @@
     {
      "label": "Wallet",
      "value": "₹2,94,00,000"
+    },
+    {
+     "label": "Lost of 5 Cr",
+     "value": "₹1,06,00,000",
+     "accent": true
     },
     {
      "label": "Company bank",
@@ -388,6 +408,11 @@
      "value": "₹2,94,00,000"
     },
     {
+     "label": "Lost of 5 Cr",
+     "value": "₹1,06,00,000",
+     "accent": true
+    },
+    {
      "label": "Company bank",
      "value": "₹1,00,00,000"
     },
@@ -418,13 +443,22 @@
    "start": 62.15,
    "end": 66.0,
    "kicker": "Day 5 · Where you stand",
-   "top": 0.2,
+   "top": 0.17,
    "items": [
     {
      "kind": "ledger",
      "label": "In the wallet",
      "value": "₹2,94,00,000",
      "at": 62.2
+    },
+    {
+     "kind": "ledger",
+     "label": "Total lost · 5 crore mein se",
+     "value": "₹1,06,00,000",
+     "new_value": "₹2,06,00,000",
+     "change_at": 65.3,
+     "color": "pink",
+     "at": 62.35
     },
     {
      "kind": "ledger",
