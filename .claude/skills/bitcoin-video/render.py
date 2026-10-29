@@ -101,13 +101,13 @@ def line_height(f):
 
 # ---------------------------------------------------------------- comic panels
 def split_panels(path, rows=None, cols=None):
-    """Find panels on a comic sheet by scanning for light gutters. Returns PIL crops in reading order."""
+    """Find panels on a comic sheet by scanning for gutters (light or dark): rows/columns of one flat
+    colour. Returns PIL crops in reading order."""
     im = Image.open(path).convert("RGB")
     g = np.asarray(im.convert("L")).astype(float)
-    light = g > 235
 
-    def runs(profile, n):
-        idx = np.where(profile < 0.6)[0]           # content lines
+    def runs(std, n):
+        idx = np.where(std >= 8)[0]                # content lines (gutters are flat)
         segs, start = [], idx[0]
         for a, b in zip(idx[:-1], idx[1:]):
             if b != a + 1:
@@ -116,8 +116,8 @@ def split_panels(path, rows=None, cols=None):
         segs = [s for s in segs if s[1] - s[0] > n * 0.08]
         return segs
 
-    ys = runs(light.mean(1), g.shape[0])
-    xs = runs(light.mean(0), g.shape[1])
+    ys = runs(g.std(1), g.shape[0])
+    xs = runs(g.std(0), g.shape[1])
     pad = 5  # drop the black panel border
     out = []
     for y0, y1 in ys:
@@ -213,7 +213,7 @@ def render_panel(scene, t, ctx):
     if hud:
         draw_hud(frame, hud)
     if scene.get("subtitles", True):
-        draw_subtitle(frame, ctx["chunks"], t)
+        draw_subtitle(frame, ctx["chunks"], t, scene.get("sub_y", 0.64) * H)
     return frame
 
 

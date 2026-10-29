@@ -1,0 +1,566 @@
+{
+ "sheet": "part4.sheet.png",
+ "audio": "part4.voiceover.mp3",
+ "words": "part4.words.json",
+ "duration": 80.04,
+ "hud": [
+  {
+   "label": "Wallet",
+   "value": "₹4,44,00,000"
+  },
+  {
+   "label": "Lost",
+   "value": "₹50,00,000"
+  },
+  {
+   "label": "Cyber radar",
+   "value": "85%",
+   "accent": true
+  }
+ ],
+ "scenes": [
+  {
+   "type": "panel",
+   "start": 0,
+   "end": 5.16,
+   "panel": 4,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.45,
+    0.6
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 5.16,
+   "end": 6.96,
+   "top": 0.27,
+   "kicker": "Every rupee leaves a trail",
+   "items": [
+    {
+     "kind": "title",
+     "text": "PART 4\nHAWALA",
+     "at": 5.2
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 6.96,
+   "end": 9.5,
+   "panel": 1,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.5,
+    0.6
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 9.5,
+   "end": 12.2,
+   "panel": 2,
+   "zoom": [
+    1.1,
+    1.0
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 12.2,
+   "end": 13.76,
+   "panel": 3,
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 13.76,
+   "end": 16.92,
+   "kicker": "Hawala",
+   "top": 0.27,
+   "items": [
+    {
+     "kind": "title",
+     "text": "NA BANK.",
+     "size": 170,
+     "at": 14.5
+    },
+    {
+     "kind": "title",
+     "text": "NA KYC.",
+     "size": 170,
+     "color": "pink",
+     "at": 15.7
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 16.92,
+   "end": 24.85,
+   "kicker": "The rule",
+   "items": [
+    {
+     "kind": "head",
+     "text": "Rule simple.",
+     "at": 16.95
+    },
+    {
+     "kind": "line",
+     "text": "Tumhara Crypto",
+     "at": 18.0
+    },
+    {
+     "kind": "arrow",
+     "at": 18.5
+    },
+    {
+     "kind": "line",
+     "text": "Seth ka Dubai wallet",
+     "at": 18.9
+    },
+    {
+     "kind": "arrow",
+     "at": 21.1
+    },
+    {
+     "kind": "line",
+     "text": "₹10 note ka serial number",
+     "color": "pink",
+     "at": 21.9
+    },
+    {
+     "kind": "stamp",
+     "text": "NO BANK · NO TRAIL",
+     "at": 23.4
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 24.85,
+   "end": 28.36,
+   "panel": 4,
+   "zoom": [
+    1.1,
+    1.0
+   ],
+   "focus": [
+    0.4,
+    0.55
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 28.36,
+   "end": 30.96,
+   "panel": 3,
+   "zoom": [
+    1.08,
+    1.0
+   ],
+   "focus": [
+    0.7,
+    0.5
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹3,94,00,000"
+    },
+    {
+     "label": "In hawala",
+     "value": "₹50,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "85%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 30.96,
+   "end": 35.46,
+   "panel": 5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "hud": [],
+   "sub_y": 0.88
+  },
+  {
+   "type": "card",
+   "start": 35.46,
+   "end": 37.2,
+   "kicker": "Problem 1 · Seth ka cut",
+   "items": [
+    {
+     "kind": "line",
+     "text": "₹50 lakh − 30%",
+     "color": "muted",
+     "at": 35.46
+    },
+    {
+     "kind": "arrow",
+     "at": 35.5
+    },
+    {
+     "kind": "big",
+     "count": [
+      5000000,
+      3500000
+     ],
+     "prefix": "₹",
+     "count_dur": 0.8,
+     "at": 35.6
+    },
+    {
+     "kind": "stamp",
+     "text": "BACHE 35 LAKH",
+     "at": 36.1
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 37.2,
+   "end": 39.3,
+   "kicker": "Par",
+   "top": 0.27,
+   "items": [
+    {
+     "kind": "title",
+     "text": "ASLI KHEL\nAB HUA",
+     "size": 160,
+     "at": 37.4
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 39.3,
+   "end": 47.75,
+   "kicker": "Problem 2 · Khabar",
+   "items": [
+    {
+     "kind": "line",
+     "text": "Hawala market",
+     "at": 39.3
+    },
+    {
+     "kind": "arrow",
+     "at": 40.0
+    },
+    {
+     "kind": "line",
+     "text": "Khabar aag ki tarah",
+     "color": "pink",
+     "at": 40.1
+    },
+    {
+     "kind": "gap",
+     "h": 30
+    },
+    {
+     "kind": "small",
+     "text": "Seth ko pata chal gaya",
+     "at": 42.6
+    },
+    {
+     "kind": "big",
+     "text": "₹4-5 Crore",
+     "at": 44.4
+    },
+    {
+     "kind": "stamp",
+     "text": "AUR TUM AKELE",
+     "at": 46.5
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 47.75,
+   "end": 49.7,
+   "panel": 6,
+   "zoom": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹3,94,00,000"
+    },
+    {
+     "label": "In hawala",
+     "value": "₹35,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "85%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 49.7,
+   "end": 52.35,
+   "kicker": "Seth ne",
+   "top": 0.27,
+   "items": [
+    {
+     "kind": "title",
+     "text": "LOCATION\nBECH DI",
+     "size": 160,
+     "at": 50.6
+    },
+    {
+     "kind": "stamp",
+     "text": "→ MAFIA",
+     "at": 51.0
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 52.35,
+   "end": 56.59,
+   "panel": 7,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹3,94,00,000"
+    },
+    {
+     "label": "In hawala",
+     "value": "₹35,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "85%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 56.59,
+   "end": 60.2,
+   "panel": 8,
+   "zoom": [
+    1.12,
+    1.0
+   ],
+   "hud": [
+    {
+     "label": "Wallet",
+     "value": "₹3,94,00,000"
+    },
+    {
+     "label": "In hawala",
+     "value": "₹35,00,000"
+    },
+    {
+     "label": "Cyber radar",
+     "value": "85%",
+     "accent": true
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 60.2,
+   "end": 64.0,
+   "kicker": "Hawala ka hisaab",
+   "top": 0.24,
+   "items": [
+    {
+     "kind": "line",
+     "text": "₹50 lakh bhi gaye",
+     "at": 60.2
+    },
+    {
+     "kind": "stamp",
+     "text": "SCAM #2",
+     "at": 60.9
+    },
+    {
+     "kind": "big",
+     "count": [
+      3500000,
+      0
+     ],
+     "prefix": "₹",
+     "color": "pink",
+     "size": 190,
+     "count_dur": 0.7,
+     "at": 62.3
+    },
+    {
+     "kind": "small",
+     "text": "haath mein",
+     "at": 62.3
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 64.0,
+   "end": 67.16,
+   "kicker": "Day 4 · Where you stand",
+   "top": 0.2,
+   "items": [
+    {
+     "kind": "ledger",
+     "label": "In the wallet",
+     "value": "₹4,44,00,000",
+     "new_value": "₹3,94,00,000",
+     "change_at": 65.3,
+     "at": 64.0
+    },
+    {
+     "kind": "ledger",
+     "label": "Lost so far",
+     "value": "₹50,00,000",
+     "new_value": "₹1,00,00,000",
+     "change_at": 64.6,
+     "color": "pink",
+     "at": 64.2
+    },
+    {
+     "kind": "ledger",
+     "label": "Cyber radar",
+     "meter": true,
+     "from": 85,
+     "value": 85,
+     "at": 64.4
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "start": 67.16,
+   "end": 72.82,
+   "kicker": "Ab samajh aa gaya",
+   "items": [
+    {
+     "kind": "rows",
+     "rows": [
+      {
+       "text": "Gunde",
+       "at": 68.5,
+       "strike": true
+      },
+      {
+       "text": "Dalal",
+       "at": 69.0,
+       "strike": true
+      }
+     ]
+    },
+    {
+     "kind": "gap",
+     "h": 30
+    },
+    {
+     "kind": "head",
+     "text": "Dimaag chahiye.",
+     "color": "pink",
+     "at": 71.0
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "start": 72.82,
+   "end": 77.96,
+   "panel": 9,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "hud": []
+  },
+  {
+   "type": "card",
+   "theme": "dark",
+   "start": 77.96,
+   "end": 80.04,
+   "top": 0.25,
+   "kicker": "Every rupee leaves a trail",
+   "items": [
+    {
+     "kind": "title",
+     "text": "PART 5\nKAL",
+     "at": 77.96
+    },
+    {
+     "kind": "line",
+     "text": "Kiske paas jaoge?",
+     "at": 77.96
+    },
+    {
+     "kind": "small",
+     "text": "Comment karo",
+     "at": 77.96
+    },
+    {
+     "kind": "buttons",
+     "at": 78.2,
+     "buttons": [
+      {
+       "text": "CORRUPT CA"
+      },
+      {
+       "sep": "ya"
+      },
+      {
+       "text": "GOA CASINO",
+       "pink": true
+      }
+     ]
+    },
+    {
+     "kind": "small",
+     "text": "Majority Part 5 likhegi.",
+     "at": 78.8
+    }
+   ]
+  }
+ ]
+}

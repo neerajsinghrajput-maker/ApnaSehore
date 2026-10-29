@@ -63,8 +63,12 @@ Copy is Roman Hinglish, short and punchy, numbers in Indian format (`₹1,96,96,
    - Preferred: ElevenLabs `creative_transcribe_audio` (create flow → asset upload → PUT bytes →
      finalize → transcribe → poll `creative_get_flow_run_status`, read `words`). If it returns
      Devanagari, rewrite each word's `text` in Roman Hinglish but keep its timing.
-   - Fallback: ask the user for the voiceover script, save it as `script.txt`, then
-     `python align.py voiceover.mp3 script.txt words.json` (estimates timings from pauses).
+   - Fallback (connector unavailable): ask the user to paste the voiceover script. Write it to
+     `examples/partN.script.txt` **one phrase per line, breaking exactly where the voice pauses**, then
+     `python align.py voiceover.mp3 partN.script.txt partN.words.json`. When the line count equals the
+     number of speech segments, each line is pinned to its own segment (accurate); otherwise it prints
+     the segment list — compare durations to phrase lengths, merge/split lines, and re-run.
+     Attach dashes to the previous word (`bazaar—`) so they don't show as separate subtitle words.
 3. **Write the story beats**: read the transcript, mark where each sentence starts, and decide per
    beat: panel (which one) vs cream card vs dark card. Every panel should be used at least once;
    cards carry the numbers and rules. Keep HUD values continuous with the previous part — see
@@ -111,7 +115,9 @@ Fonts: Inter / Inter Display and JetBrains Mono (system paths, or drop the files
 
 Scene keys: `start`/`end` in seconds (scenes must tile 0 → `duration` with no gaps).
 Panel scene: `panel` (1-based), optional `zoom` [from, to], `focus` [x, y] 0–1 (where the push
-lands), `hud` (overrides the global HUD for this scene), `subtitles: false`.
+lands), `hud` (overrides the global HUD for this scene; `[]` hides it — use on panels whose own text sits
+under the HUD), `subtitles: false`, `sub_y` (0–1, default 0.64; move subtitles off text in the art).
+Check every panel in the preview: if the HUD or subtitle covers words drawn in the comic, fix it.
 Card scene: `theme` light/dark, `kicker`, `top` (0–1, default 0.21), `items`.
 
 Card item kinds (all take `at` = absolute second when it appears; optional `color`: `pink`/`muted`;
