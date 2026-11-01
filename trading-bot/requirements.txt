@@ -1,0 +1,4 @@
+pandas>=2.0
+numpy>=1.24
+# Optional: real market data (NSE stocks like RELIANCE.NS, crypto like BTC-USD)
+yfinance>=0.2
