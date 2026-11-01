@@ -91,10 +91,10 @@ def run_backtest(df: pd.DataFrame, cfg: Config) -> Result:
 
 def compute_stats(eq: pd.Series, trades: list[Trade], close: pd.Series, cfg: Config) -> dict:
     daily = eq.pct_change().dropna()
-    years = max(len(eq) / 252, 1e-9)
+    years = max(len(eq) / cfg.periods_per_year, 1e-9)
     final = eq.iloc[-1]
     wins = [t for t in trades if t.pnl > 0]
-    sharpe = (daily.mean() / daily.std() * 252**0.5) if daily.std() > 0 else 0.0
+    sharpe = (daily.mean() / daily.std() * cfg.periods_per_year**0.5) if daily.std() > 0 else 0.0
     gross_win = sum(t.pnl for t in wins)
     gross_loss = -sum(t.pnl for t in trades if t.pnl <= 0)
     return {
