@@ -129,3 +129,25 @@ optional `size`):
 - `bars` — `n` bars appearing every `step` s, `label`, dashed pink `limit` line text.
 
 `examples/part3.spec.json` is the full spec for Part 3; start new parts by copying it.
+
+## Human-editor polish: visual enhancement + advanced moves (apply to every video)
+
+Edit the way a good human editor would. If this skill's house style already fixes a choice (palette, transitions, card style), the house style wins; use these to fill the gaps. Tell the user in the plan which of these moves the video uses.
+
+### Visual enhancement
+- **B-roll on the spoken word.** Whenever the voice names a thing (an object, place, number or person), cut to or overlay a visual of it, timed to the word (start 0-3 frames before it). No shot holds more than about 2.5 s without a change: a new shot, a punch-in, a text pop or an overlay.
+- **Punch-in zoom for emphasis.** On key words and punchlines, scale 1.00 to 1.12-1.20 (a hard cut, or a 4-6 frame ease-out). Alternate punch-in and punch-out across a talking section so it doesn't feel repetitive. Keep a slow Ken Burns drift (about 3-5% over the shot) on every still image.
+- **Transitions: cuts first.** Use a plain cut by default. Save whip, zoom-blur or flash transitions for section changes only (hook to body, body to CTA), at most 3-4 per reel, with a whoosh SFX on each one.
+- **Overlays, stickers, memes.** Use arrows, circles, underlines, emoji or reaction stickers to point at what matters. They pop in with a 3-5 frame overshoot scale (0 to 1.15 to 1.0) and carry a pop SFX. Use one at a time and keep them clear of the face and the captions.
+- **Speed ramps and slow-mo.** Slow to 0.5x on the reveal or impact moment, then ramp back to 1x. On footage, ramp fast (1.5-2x) through boring motion. Never speed-ramp over speech.
+
+### Advanced moves
+- **Keyframing.** Animate position, scale, rotation and opacity with eased keyframes (ease-out for entries, ease-in for exits, never linear). Text and graphics enter in 6-10 frames and leave faster than they came.
+- **Masking.** Use masks for reveals (wipe a shape or text in behind a mask), to put text *behind* a subject cut-out, and to spotlight one area (darken everything else by 40-60%).
+- **Green screen / cut-out.** When the subject must sit over a new background, key it (ffmpeg `chromakey`/`colorkey`, or a background-removal pass), add a soft 1-2 px edge feather and a faint drop shadow, and colour-match the subject to the plate.
+- **Motion tracking.** Labels, arrows and blurs that belong to a moving object follow it, using face- or object-track data (the skill's face track, OpenCV tracking, or hand-placed keyframes every 5-10 frames). Never leave a label floating where the object used to be.
+- **Stabilization.** Shaky handheld footage gets `vidstab` (ffmpeg `vidstabdetect`/`vidstabtransform`, smoothing about 10-20) plus a small crop-in to hide the edges. Shots that are meant to be handheld-energetic stay as they are.
+- **Multicam.** With several angles or cameras, sync them on the audio (a clap or waveform cross-correlation) and cut angles on sentence or beat boundaries, never mid-word. Change angle roughly every 4-8 s in talking sections.
+
+### QA for these moves
+Before delivering, scrub the render and check: no shot is static for more than about 2.5 s, every sticker or label is clear of face and captions, tracked items stay locked to their object, no transition happens mid-word, and slow-mo never covers speech.
